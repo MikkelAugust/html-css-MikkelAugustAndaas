@@ -1,82 +1,95 @@
+@import url('variables.css');
+
 .logo {
-    background-color: rgba(255, 255, 255, 0.589);
-    position: fixed;
+    background-color: var(--logo-background-color);
+    position: absolute;
     top: 20px;
     left: 20px;
-    max-width: 300px;
+    max-width: 200px;
     height: auto;
     border-radius: 20px;
 }
 
-.nav{
-    color: rgb(27, 28, 88);
+.nav-bar{
+    position: fixed;
+    top: 0;
+    right: 0;
     display: flex;
-    justify-content: baseline;
+    justify-content: flex-end;
     align-items: center;
+    padding: 10px;
+    width: auto;
+    background: var(--logo-background-color);
+    border-radius: 10px;
+    z-index: 1000;
 }
 
 .navlinks{
-    background-color: rgba(255, 255, 255, 0.685);
-    position: absolute;
     display: flex;
     align-items: center;
-    top: 50px;
-    right: 30px;
-    border-radius: 20px;
-    margin: 0px;
-    padding: 2px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+}
+    
+.navlinks li{
+    display: flex;
+    align-items: center;
 }
 
-.navlinks ul{
-    color: rgb(27, 28, 88);
-    margin: 5px;
-    width: auto;
+.navlinks li a {
+    text-decoration: none;
+    color: var(--navbar-primary-color);
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.library{
-    color: rgb(27, 28, 88);
+.library:hover, .about:hover, .contact:hover {
+    background-color: var(--red-color);
+    color: var(--primary-color);
 }
 
-.about{
-    color: rgb(27, 28, 88);
+.head-png, .cart {
+    width: 30px;
+    height: auto;
+    max-width: 100%;
 }
 
-.contact{
-    color: rgb(27, 28, 88);
+.cart {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10%;
 }
 
-.contact{
-    color: rgb(27, 28, 88);
+.search form{
+    display: flex;
+    align-items: center;
 }
 
-.cart{
-    width: 40px;
-    height: 40px;
-    margin: 0%;
+.search input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
+
+.search button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    color: var(--primary-color)
+}
+
 
 .cart:hover{
-    background-color: rgb(255, 63, 95);
-    border-radius: 20px;
+    background-color: var(--red-color);
+    border-radius: var(--button-border-radius20);
 }
 
-.library:hover{
-    background-color: rgb(255, 63, 95);
-    color: white;
+.library:hover, .about:hover, .contact:hover {
+    background-color: var(--red-color);
+    color: var(--primary-color);
     border-radius: 10px;
-    padding: 10px;
-}
-
-.about:hover{
-    background-color: rgb(255, 63, 95);
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.contact:hover{
-    background-color: rgb(255, 63, 95);
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-}
+    }

@@ -1,10 +1,8 @@
-* {
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-}
+@import url('variables.css');
+@import url('logo&navbar.css');
+@import url('imageconteiner.css');
+@import url('footer.css');
+
 
 body {
     font-family: 'Changa', sans-serif;
@@ -14,35 +12,39 @@ body {
     color: #ffffff;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     min-height: 100vh;
 }
 
 main {
-    margin-top: 400px;
-    position:sticky;
+    margin-top: 300px;
+    position: sticky;
     justify-content: center;
     display: flex;
-    padding: 10px 20px;
     text-decoration: none;
 }
 
 .explore {
-    color: white;
+    position: sticky;
+    color: var(--primary-color);
     background-color: rgba(0, 0, 0, 0.774);
-    display: flex;
     justify-content: center;
     text-decoration: none;
-    margin: 50px;
-    padding: 15px;
+    max-width: 100%;
+    max-height: auto;
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 
 .explore:hover {
-    background-color: rgb(255, 63, 95);
+    background-color: var(--red-color);
     display: flex;
 }
 
 .explore a {
-    padding: 10px;
+    padding: var(--standard-padding);
     flex: auto;
 }

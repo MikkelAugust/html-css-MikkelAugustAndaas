@@ -1,10 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-decoration: none;
-}
+@import url('variables.css');
+@import url('logo&navbar.css');
+@import url('footer.css');
 
 body{
     font-family: 'Changa', sans-serif;
@@ -12,7 +8,8 @@ body{
     margin: 0;
     background-size: cover;
     background-position: center;
-    color: #fff;
+    background-repeat: none;
+    color: var(--primary-color);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -30,33 +27,34 @@ main{
     display: flex;
     padding: 10px 20px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: var(--common-font-size);
 }
 
 .gamecover{
     display: block;
-    max-width: 40%;
     width: 100%;
     height: auto;
+    max-height: auto;
+    max-width: 50%;
     border-radius: 10%;
-    margin-top: 7%;
+    margin-top: 0%;
     margin-left: auto;
     margin-right: 0;
 }
 
 .gametext{
-    background-color: #35353565;
-    border-radius: 10px;
+    background-color: var(--game-text-background-color);
     position:absolute;
-    left: 3%;
-    top: 25%;
-    font-size: 1.25rem;
-    width: 80%;
-    max-width: 600px;
+    left: 2%;
+    top: 0%;
+    font-size: 1.45rem;
+    width: 38%;
+    max-width: 100%;
     word-wrap: break-word;
     text-align: left;
     line-height: 40px;
-    padding: 10px;
+    padding: 30px;
+    border-radius: 20px;
 }
 
 .button1{
@@ -64,14 +62,14 @@ main{
     font-size: 1rem;
     padding: 15px 32px;
     right: 5%;
-    bottom: 16%;
-    border-radius: 20px;
-    background-color: rgb(3, 59, 133);
-    border-color: rgb(255, 63, 95);
+    bottom: 3%;
+    border-radius: var(--button-border-radius20);
+    background-color: var(--blue-color);
+    border-color: var(--red-color);
 }
 
 .button1:hover{
-    background-color: rgb(255, 63, 95);
+    background-color: var(--red-color);
     text-transform: uppercase;
 }
 

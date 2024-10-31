@@ -1,3 +1,5 @@
+@import url('variables.css');
+
 .image-container {
     gap: 5px;
     display: block;
@@ -6,15 +8,13 @@
     margin-top: 10px;
     margin-bottom: 10px;
     text-decoration: none;
+    padding: 0;
 }
 
-.image-placeholder {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 100px;
-    margin: 20px;
+.image-placeholder-container {
+    background-color: var(--color-image-placeholder);
     border-radius: 10px;
-    max-width: 140px;
+    max-width: 300px;
     height: auto;
     transition-property: transform;
     transition-duration: 0.3s;
@@ -22,196 +22,7 @@
     transition-delay: 0s;
 }
 
-.image-placeholder1{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 100px;
-    margin: 20px;
-    border-radius: 10px;
-    max-width: 140px;
-    height: auto;
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-
-.image-placeholder2{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 100px;
-    margin: 20px;
-    border-radius: 10px;
-    max-width: 140px;
-    height: auto;
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-.image-placeholder3{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 100px;
-    margin: 20px;
-    border-radius: 10px;
-    max-width: 140px;
-    height: auto;
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-
-.image-placeholder4{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 100px;
-    margin: 20px;
-    border-radius: 10px;
-    max-width: 140px;
-    height: auto;
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-
-.image-placeholder5{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 100px;
-    margin: 20px;
-    border-radius: 10px;
-    max-width: 140px;
-    height: auto;
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-
-.image-placeholder6{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 100px;
-    margin: 20px;
-    border-radius: 10px;
-    max-width: 140px;
-    height: auto;
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-
-.image-placeholder7{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 100px;
-    margin: 20px;
-    border-radius: 10px;
-    max-width: 140px;
-    height: auto;
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-
-.image-placeholder8{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 100px;
-    margin: 20px;
-    border-radius: 10px;
-    max-width: 140px;
-    height: auto;
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-
-.image-placeholder9{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 100px;
-    margin: 20px;
-    border-radius: 10px;
-    max-width: 140px;
-    height: auto;
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-
-.image-placeholder10{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 100px;
-    margin: 20px;
-    border-radius: 10px;
-    max-width: 140px;
-    height: auto;
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-
-.image-placeholder:hover {
-    background-color: rgb(255, 63, 95);
-    transform: translateY(-10px);
-}
-
-.image-placeholder1:hover {
-    background-color: rgb(255, 63, 95);
-    transform: translateY(-10px);
-}
-
-.image-placeholder2:hover {
-    background-color: rgb(255, 63, 95);
-    transform: translateY(-10px);
-}
-
-.image-placeholder3:hover {
-    background-color: rgb(255, 63, 95);
-    transform: translateY(-10px);
-}
-
-.image-placeholder4:hover {
-    background-color: rgb(255, 63, 95);
-    transform: translateY(-10px);
-}
-
-.image-placeholder5:hover {
-    background-color: rgb(255, 63, 95);
-    transform: translateY(-10px);
-}
-
-.image-placeholder6:hover {
-    background-color: rgb(255, 63, 95);
-    transform: translateY(-10px);
-}
-
-.image-placeholder7:hover {
-    background-color: rgb(255, 63, 95);
-    transform: translateY(-10px);
-}
-
-.image-placeholder8:hover {
-    background-color: rgb(255, 63, 95);
-    transform: translateY(-10px);
-}
-
-.image-placeholder9:hover {
-    background-color: rgb(255, 63, 95);
-    transform: translateY(-10px);
-}
-
-.image-placeholder10:hover {
-    background-color: rgb(255, 63, 95);
+.image-placeholder-container:hover {
+    background-color: var(--red-color);
     transform: translateY(-10px);
 }

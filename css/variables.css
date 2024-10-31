@@ -1,0 +1,17 @@
+:root {
+    --primary-color: #ffffff;
+    --red-color: rgb(255, 63, 95);
+    --blue-color: rgb(3, 59, 133);
+    --color-image-placeholder: rgba(255, 255, 255, 0.1);
+    --background-linear-color: linear-gradient(#0A2E8C, #030D26);
+    --game-text-background-color: #35353593;
+    --logo-background-color: rgb(170, 170, 170);
+    --navbar-primary-color: rgb(27, 28, 88);
+    --standard-padding: 10px;
+    --common-font-size: 1rem;
+    --navbar-border-radius10: 10px;
+    --button-border-radius10: 10%;
+    --button-border-radius20: 20%;
+    --button-border-radius50: 50%;
+    --common-text-font-size: 1,45rem;
+}
