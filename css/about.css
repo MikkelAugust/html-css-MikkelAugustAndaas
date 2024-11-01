@@ -3,14 +3,6 @@
 @import url('imageconteiner.css');
 @import url('footer.css');
 
-* {
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-}
-
 body{
     background: var(--background-linear-color);
     color: var(--primary-color);
@@ -32,7 +24,8 @@ main{
     background-color: var(--game-text-background-color);
     position:relative;
     left: 3%;
-    top: 20%;
+    margin-top: 0%;
+    margin-bottom: 10%;
     font-size: 1.45rem;
     width: 55%;
     max-width: 100%;

@@ -2,13 +2,13 @@
 @import url('logo&navbar.css');
 @import url('footer.css');
 
-body{
+body {
     font-family: 'Changa', sans-serif;
     background-image: url("/assets/images/smoke.jpg2.jpg");
     margin: 0;
     background-size: cover;
     background-position: center;
-    background-repeat: none;
+    background-repeat: no-repeat;
     color: var(--primary-color);
     box-sizing: border-box;
     display: flex;
@@ -18,37 +18,36 @@ body{
     overflow-x: hidden;
 }
 
-main{
+main {
     margin-top: 10%;
     margin-right: 5%;
     margin-bottom: 20px;
-    position:sticky;
+    position: sticky;
     justify-content: flex-end;
     display: flex;
     padding: 10px 20px;
     text-decoration: none;
-    font-size: var(--common-font-size);
 }
 
-.gamecover{
+
+.gamecover {
     display: block;
-    width: 100%;
+    width: 40%;
     height: auto;
-    max-height: auto;
-    max-width: 50%;
     border-radius: 10%;
-    margin-top: 0%;
-    margin-left: auto;
-    margin-right: 0;
+    margin-top: 10%;
+    margin-left: 50%;
+    margin-right: auto;
 }
 
-.gametext{
+
+.gametext {
     background-color: var(--game-text-background-color);
-    position:absolute;
+    position: absolute;
     left: 2%;
-    top: 0%;
-    font-size: 1.45rem;
-    width: 38%;
+    top: 20%;
+    font-size: 1.4rem;
+    width: 40%;
     max-width: 100%;
     word-wrap: break-word;
     text-align: left;
@@ -57,42 +56,101 @@ main{
     border-radius: 20px;
 }
 
-.button1{
+.price {
+    position: relative;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-style:dotted;
+    border-color: green;
+    max-width: 7.3%;
+    margin-left: 90%;
+}
+
+
+.button1 {
     position: fixed;
     font-size: 1rem;
     padding: 15px 32px;
     right: 5%;
     bottom: 3%;
-    border-radius: var(--button-border-radius20);
+    border-radius: var(--button-border-radius10);
     background-color: var(--blue-color);
     border-color: var(--red-color);
 }
 
-.button1:hover{
+
+.button1:hover {
     background-color: var(--red-color);
     text-transform: uppercase;
 }
 
-@media screen and (max-width: 768px) {
+
+@media (max-width: 1200px) {
+    body {
+        font-size: 1rem;
+    }
+
     main {
-        margin-top: 10%;
+        margin-top: 0%;
+        margin-bottom: 20%px;
         justify-content: center;
         padding: 5px;
     }
 
     .gamecover {
-        max-width: 80%;
+        max-width: 25%;
+        margin-top: 40%;
     }
 
     .gametext {
-        left:1.5%;
-        font-size: 1rem;
-        width: 90%;
-        line-height: 1.5rem;
+        font-size: 0.75rem;
+        line-height: 1.6;
+        padding: 10px;
+        margin-top: 30%;
+        margin-right: 50%;
     }
 
     .button1 {
         font-size: 0.875rem;
-        padding: 10px 24px;
+        padding: 10px 20px;
+        right: 2%;
+        bottom: 2%;
+        margin-bottom: 10%;
+    }
+
+    .price {
+        font-size: 0.75rem;
+        margin-left: 70%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    main {
+        margin-top: 10%;
+        margin-bottom: 0%;
+    }
+
+    .gamecover {
+        max-width: 20%;
+        margin-top: 60%;
+        right: 20%;
+    }
+
+    .gametext {
+        margin-top: 0;
+        font-size: 0.7rem;
+        line-height: 1.4;
+        padding: 10px;
+    }
+
+    .button1 {
+        font-size: 0.75rem;
+        padding: 8px 16px;
+        margin-bottom: 20%;
+    }
+
+    .price {
+        font-size: 0.65rem;
     }
 }

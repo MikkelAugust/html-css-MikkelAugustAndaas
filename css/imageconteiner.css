@@ -1,25 +1,46 @@
 @import url('variables.css');
 
 .image-container {
-    gap: 5px;
-    display: block;
-    background-color: #0000009d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-image-placeholder);
     border-radius: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-decoration: none;
+    padding: 20px;
+    margin:0 auto;
+    gap: 20px;
+}
+
+.image-grid{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr;
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .image-placeholder-container {
     background-color: var(--color-image-placeholder);
     border-radius: 10px;
-    max-width: 300px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
     transition-property: transform;
     transition-duration: 0.3s;
     transition-timing-function: ease;
     transition-delay: 0s;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-image-placeholder);
+    border-radius: 30px;
+    padding: 20px;
+    margin:0 auto;
+    gap: 20px;
 }
 
 .image-placeholder-container:hover {

@@ -8,32 +8,35 @@
     <link rel="stylesheet" href="/css/contact.css">
     <link rel="stylesheet" href="/css/logo&navbar.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" href="/assets/images/head.png">
-    <title>GameHub - About Us</title>
+    <title>GameHub - Contact Us</title>
 </head>
 
-<header>
-    <logo class="header-content">
-        <a href="/index.html"><img class="logo" src="/assets/images/gamehub_logo.png" alt="GameHub Logo">
-    </logo>
-
-
-    <nav class="nav-bar">
-        <ul class="navlinks">
-          <li><img href="/assets/images/head.png"><img class="head-png" src="/assets/images/head.png" alt="head icon"></li>
-          <li class="library"><a href="/library/index.html">Library</a></li>
-          <li class="about"><a href="about/index.html">About</a></li>
-          <li class="contact"><a href="/contact/index.html">Contact</a></li>
-              <form action="/nav-bar/index.html">
-                  <input type="text" placeholder="search.." name="search">
-                  <button type="submit">Submit</button>
-              </form>
-            <li><a href="/cart/index.html"><img class="cart" src="/assets/images/shoppingcart.png" alt="cart icon"/></a></li>
-        </ul>
-    </nav>
-</header>
-
 <body>
+    
+    <header>
+        <section class="header-content">
+            <a href="/index.html"><img class="logo" src="/assets/images/gamehub_logo.png" alt="GameHub Logo">
+        </section>
+    
+        <nav class="nav-bar">
+            <ul class="navlinks">
+              <li><img href="/assets/images/head.png"><img class="head-png" src="/assets/images/head.png" alt="head icon"></li>
+              <li class="library-text"><a href="/library/index.html">Library</a></li>
+              <li class="about-text"><a href="/about/index.html">About</a></li>
+              <li class="contact-text"><a href="/contact/index.html">Contact</a></li>
+    
+                  <form action="#">
+                      <input type="text-main" placeholder="search.." name="search">
+                      <button type="submit">Submit</button>
+                  </form>
+                  
+                <li><a href="/cart/index.html"><img class="cart" src="/assets/images/shoppingcart.png" alt="cart icon"/></a></li>
+            </ul>
+        </nav>
+    </header>
+
 <main>
     <article class="article">
         <h1>Contact Us</h1>
@@ -59,7 +62,11 @@
         <img href="/index.html"><img class="logo-img" src="/assets/images/gamehub_logo.png"  alt="GameHub Logo">
 
     <div class="filling-conteiner1">
-        <h1 class="contact-details">Contact Details</h1>
+        <section class="textbox">
+            <textarea class="text-input" placeholder="write your message here.."></textarea>
+        </section>
+
+        <label class="contact-details">Contact Details</label>
             <form class="name" action="#">
                 <input type="text" placeholder="name.." name="name">
             </form>
@@ -68,53 +75,17 @@
                 <input type="text" placeholder="email.." name="email">
             </form>
     </div>
-
-            <div class="filling-conteiner2"></div>
-                <h1 class="billing-details">Billing Details</h1>
-
-                    <form class="adress" action="#">
-                        <input type="text" placeholder="adress.." name="adress">
-                    </form>
-
-                    <form class="postal-code" action="#">
-                        <input type="text" placeholder="postal code.." name="postal-code">
-                    </form>
-                    
-                    <form class="city" action="#">
-                        <input type="text" placeholder="city.." name="city">
-                    </form>
-
-                    <form class="country" action="#">
-                        <input type="text" placeholder="country.." name="country">
-                    </form>
-            </div>
-
-                        <div class="filling-conteiner3">
-                            <h1 class="card-details">Card Details</h1>
-
-                                <form class="card-number" action="#">
-                                    <input type="text" placeholder="card number.." name="card-number">
-                                </form>
-
-                                <form class="expiry-date" action="#">
-                                    <input type="text" placeholder="expiry date.." name="expiry-date">
-                                </form>
-
-                                <form class="cvc" action="#">
-                                    <input type="text" placeholder="cvc.." name="cvc">
-                                </form>
-                        </div>
-            <button class="button" type="submit">Submit</button>
-</div>
+                            
+    <a class="submit" href="/feedbackcomplete/index.html"><button class="button" type="submit">Submit</button></a>
 </main>
 
 <footer>
         <div class="social-media">
 
-            <a class="facebook" href="https://www.facebook.com/"><img src="/assets/images/facebook-logo.jpg" alt="Facebook icon"></a>
-            <a class="github icon" href="https://github.com/"><img src="/assets/images/github-logo.jpg" alt="GitHub icon"></a>
-            <a class="instagram icon"href="https://www.instagram.com/"><img src="/assets/images/instagram-logo.jpg" alt="Instagram icon"></a>
-            <a class= "twitter icon" href="https://twitter.com/"><img src="/assets/images/x-logo.jpg" alt="Twitter icon"></a>
+            <a class="facebook-icon" href="https://www.facebook.com/"><img src="/assets/images/facebook-logo.jpg" alt="Facebook icon"></a>
+            <a class="github-icon" href="https://github.com/"><img src="/assets/images/github-logo.jpg" alt="GitHub icon"></a>
+            <a class="instagram-icon"href="https://www.instagram.com/"><img src="/assets/images/instagram-logo.jpg" alt="Instagram icon"></a>
+            <a class= "twitter-icon" href="https://twitter.com/"><img src="/assets/images/x-logo.jpg" alt="Twitter icon"></a>
             
         </div>
 </footer>

@@ -21,6 +21,7 @@
     width: auto;
     background: var(--logo-background-color);
     border-radius: 10px;
+    border-style:double;
     z-index: 1000;
 }
 
@@ -31,35 +32,37 @@
     padding: 0;
     margin: 0;
     gap: 15px;
+    justify-content: center;
 }
-    
+  
 .navlinks li{
     display: flex;
     align-items: center;
+    justify-content: center;
+    max-height: 20px;
+    max-width: 100%;
 }
 
 .navlinks li a {
     text-decoration: none;
     color: var(--navbar-primary-color);
-    padding: 5px 10px;
+    padding: 5px 2px;
     font-size: 1rem;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.library:hover, .about:hover, .contact:hover {
-    background-color: var(--red-color);
-    color: var(--primary-color);
-}
+.head-png{
+    width: 40px;
+    height: auto;
+    max-width: 100%;
+} 
 
-.head-png, .cart {
+.cart {
     width: 30px;
     height: auto;
     max-width: 100%;
-}
-
-.cart {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--blue-color);
     border-radius: 10%;
 }
 
@@ -68,7 +71,7 @@
     align-items: center;
 }
 
-.search input {
+.search input [type=text-main] {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -78,18 +81,66 @@
     padding: 5px 10px;
     margin-left: 5px;
     border-radius: 5px;
-    background-color: var(--button-color);
+    background: var(--button-color);
     color: var(--primary-color)
 }
 
-
-.cart:hover{
-    background-color: var(--red-color);
-    border-radius: var(--button-border-radius20);
-}
-
-.library:hover, .about:hover, .contact:hover {
+.navlinks li a:hover {
     background-color: var(--red-color);
     color: var(--primary-color);
-    border-radius: 10px;
+    max-width: 100%;
+    max-height: 35px;
+    }
+
+    @media (max-width: 800px) {
+
+        .logo {
+            max-width: 100px;
+        }
+
+        .nav-bar {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: 3px;
+            max-width: 21%;
+            align-items: center;
+        }
+    
+        .navlinks {
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            align-items: center;
+        }
+    
+        .navlinks li {
+            width: 100%;
+            align-items: center;
+        }
+    
+        .navlinks li a {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            color: var(--navbar-primary-color);
+        }
+
+    }
+    
+    @media (max-width: 300px) {
+        .navlinks li a {
+            text-align: center;
+            font-size: 0.8rem;
+            padding: 8px;
+        }
+        
+        .logo {
+            max-width: 100px;
+        }
+    
+        .cart {
+            width: 25px;
+        }
     }

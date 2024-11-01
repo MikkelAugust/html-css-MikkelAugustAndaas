@@ -1,4 +1,176 @@
 @import url('variables.css');
 @import url('logo&navbar.css');
-@import url('imageconteiner.css');
 @import url('footer.css');
+
+body {
+    background: var(--background-linear-color);
+    color: var(--primary-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Changa', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 150px;
+    font-size: 1.45rem;
+}
+
+.checkout-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background: var(--logo-background-color);
+    width: 100%;
+}
+
+.form-container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 30px;
+    width: 100%;
+    min-width: 600px;
+    max-height: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.forgelegend-image {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 37%;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.filling-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-items: center;
+    color: #000000;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: var(--button-border-radius10);
+    border-color: #000000;
+    background-color: var(--blue-color);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    width: 25%;
+    box-shadow: black;
+}
+
+.button:hover {
+    background-color: var(--red-color);
+    color: var(--primary-color);
+}
+
+@media (max-width: 800px){
+    body {
+        padding-top: 30px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    input[type="text"], input[type="email"] {
+        font-size: 0.9rem;
+        padding: 8px;
+        width: 90%;
+    }
+
+    .button {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+    }
+
+    .forgelegend-image {
+        width: 100px;
+        margin-left: 42%;
+    }
+
+    .price {
+        font-size: 1rem;
+        padding: 4px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 20px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    input[type="text"], input[type="email"] {
+        font-size: 0.9rem;
+        padding: 8px;
+        width: 90%;
+    }
+
+    .button {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+    }
+
+    .forgelegend-image {
+        width: 100px;
+        margin-left: 42%;
+    }
+
+    .price {
+        font-size: 1rem;
+        padding: 4px;
+    }
+}
