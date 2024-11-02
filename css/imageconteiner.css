@@ -5,9 +5,9 @@
     justify-content: center;
     align-items: center;
     background-color: var(--color-image-placeholder);
-    border-radius: 30px;
-    padding: 20px;
-    margin:0 auto;
+    border-radius: var(--common-border-radius-px30);
+    padding: var(--standard-padding20);
+    margin:var(--common-margin-0) auto;
     gap: 20px;
 }
 
@@ -16,13 +16,13 @@
     gap: 15px;
     grid-template-columns: 1fr;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: var(--standard-padding0);
+    margin: var(--common-margin-0);
 }
 
 .image-placeholder-container {
     background-color: var(--color-image-placeholder);
-    border-radius: 10px;
+    border-radius: var(--common-border-radius-px10);
     width: 100%;
     max-width: 200px;
     height: auto;
@@ -37,9 +37,9 @@
     justify-content: center;
     align-items: center;
     background-color: var(--color-image-placeholder);
-    border-radius: 30px;
-    padding: 20px;
-    margin:0 auto;
+    border-radius: var(--common-border-radius-px30);
+    padding: var(--standard-padding20);
+    margin:var(--common-margin-0) auto;
     gap: 20px;
 }
 

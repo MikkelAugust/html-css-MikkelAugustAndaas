@@ -21,8 +21,8 @@ main {
     width: 100%;
     max-width: 600px;
     min-height: 400px;
-    border-radius: 10%;
-    margin: 10% auto;
+    border-radius: var(--button-border-radius10);
+    margin: var(--standard-margin-auto-percentage);
 }
 
 .box {
@@ -31,26 +31,26 @@ main {
     grid-template-rows: 30% 30% 30%;
     grid-column-start: 1;
     background-color: var(--primary-color);
-    color: black;
+    color: var(--secoundary-color);
     justify-content: center;
     align-items: center;
     text-decoration: none;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: var(--standard-padding20);
     max-width: 500px;
     min-height: 250px;
-    border-radius: 10%;
+    border-radius: var(--button-border-radius10);
 }
 
 .v-icon{
     font-size: 1.5rem;
     width: 100px;
-    margin-bottom: 20px;
-    margin-left: 38%;
+    margin-bottom: var(--standard-margin-px20);
+    margin-left: var(--standard-margin-percentage38);
 }
 
 .paragraph, .paragraph1{
-    color: black;
+    color: var(--secoundary-color);
     margin: 5px 0;
     line-height: 40px;
     text-align: center;
@@ -72,7 +72,7 @@ main {
 
     main {
         font-size: 0.9rem;
-        margin-top: 20%;
+        margin-top: var(--standard-margin-percentage20);
         max-width: 300px;
         min-height: 200px;
     }
@@ -82,7 +82,7 @@ main {
     }
 
     .box {
-        padding: 15px;
+        padding: var(--standard-padding15);
     }
 }
 
@@ -97,7 +97,7 @@ main {
     }
 
     .box {
-        padding: 10px;
+        padding: var(--standard-padding10);
     }
 
     .paragraph, .paragraph1 {

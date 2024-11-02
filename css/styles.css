@@ -9,15 +9,15 @@ body {
     background-image: url("/assets/images/background.webp");
     background-size: cover;
     background-position: center;
-    color: #ffffff;
+    color: var(--primary-color);
     box-sizing: border-box;
     display: flex;
     flex-direction:column;
-    min-height: 100vh;
+    min-height: var(--common-min-height);
 }
 
 main {
-    margin-top: 370px;
+    margin-top: var(--standard-margin-px370);
     position: sticky;
     justify-content: center;
     display: flex;
@@ -34,10 +34,10 @@ main {
     max-width: 100%;
     max-height: auto;
     display: flex;
-    padding: 20px;
-    margin: 20px auto;
-    margin-left: 300px;
-    margin-right: 300px;
+    padding: var(--standard-padding20);
+    margin: var(--standard-margin-auto-px);
+    margin-left: var(--standard-margin-px300);
+    margin-right: var(--standard-margin-px300);
 }
 
 .explore:hover {
@@ -46,7 +46,7 @@ main {
 }
 
 .explore a {
-    padding: var(--standard-padding);
+    padding: var(--standard-padding10);
     flex: auto;
 }
 
@@ -54,7 +54,7 @@ main {
     .explore {
         width: 90%;
         justify-content: center;
-        margin: 20px auto;
+        margin: var(--standard-margin-auto-px);
     }
 }
 

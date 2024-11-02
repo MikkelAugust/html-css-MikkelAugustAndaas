@@ -11,19 +11,19 @@ body {
     flex-direction: column;
     font-family: 'Changa', sans-serif;
     box-sizing: border-box;
-    margin: 0;
+    margin: var(--standard-margin-percentage0);
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding-top: 150px;
-    font-size: 1.45rem;
+    min-height: var(--common-min-height);
+    padding-top: var(--standard-top-padding);
+    font-size: var(--common-text-font-size);
 }
 
 .checkout-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: var(--standard-padding20);
     box-sizing: border-box;
     background: var(--logo-background-color);
     width: 100%;
@@ -36,10 +36,10 @@ body {
     width: 100%;
     min-width: 600px;
     max-height: auto;
-    padding: 20px;
-    background-color: #ffffff;
+    padding: var(--standard-padding20);
+    background-color: var(--primary-color);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    border-radius: var(--common-border-radius-px10);
     text-align: center;
 }
 
@@ -47,23 +47,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--standard-margin-px20);
 }
 
 .forgelegend-image {
     width: 150px;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    margin-left: 37%;
+    border-radius: var(--button-border-radius10);
+    margin-bottom: var(--standard-margin-px10);
+    margin-left: var(--standard-margin-percentage37);
 }
 
 .price {
     font-size: 1.2rem;
-    color: #ffffff;
-    background-color: #000000;
-    padding: 5px;
-    border-radius: 5px;
+    color: var(--primary-color);
+    background-color: var(--secoundary-color);
+    padding: var(--standard-padding5);
+    border-radius: var(--common-border-radius-px5);
 }
 
 .filling-container {
@@ -71,41 +71,41 @@ body {
     grid-template-columns: 1fr;
     gap: 10px;
     justify-items: center;
-    color: #000000;
+    color: var(--secoundary-color);
 }
 
 .section-title {
     font-size: 1.2rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
+    color: var(--secoundary-color);
+    margin-bottom: var(--standard-margin-px10);
 }
 
 label {
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: var(--standard-margin-px10);
 }
 
 input[type="text"], input[type="email"] {
     width: 70%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: var(--standard-padding10);
+    border-radius: var(--common-border-radius-px5);
+    border: 1px solid var(--secoundary-color);
     font-size: 1rem;
     text-align: center;
 }
 
 .button {
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: var(--standard-padding10-20);
     border-radius: var(--button-border-radius10);
-    border-color: #000000;
+    border-color: var(--secoundary-color);
     background-color: var(--blue-color);
     color: rgb(0, 0, 0);
     cursor: pointer;
     text-align: center;
-    margin-top: 20px;
+    margin-top: var(--standard-margin-px20);
     width: 25%;
-    box-shadow: black;
+    box-shadow: var(--secoundary-color);
 }
 
 .button:hover {
@@ -115,62 +115,62 @@ input[type="text"], input[type="email"] {
 
 @media (max-width: 800px){
     body {
-        padding-top: 30px;
+        padding-top: var(--standard-padding30);
     }
 
     .form-container {
-        padding: 15px;
+        padding: var(--standard-padding15);
     }
 
     input[type="text"], input[type="email"] {
         font-size: 0.9rem;
-        padding: 8px;
+        padding: var(--standard-padding8);
         width: 90%;
     }
 
     .button {
-        padding: 8px 18px;
+        padding: var(--standard-padding8-18);
         font-size: 0.9rem;
     }
 
     .forgelegend-image {
         width: 100px;
-        margin-left: 42%;
+        margin-left: var(--standard-margin-percentage42);
     }
 
     .price {
         font-size: 1rem;
-        padding: 4px;
+        padding: var(--standard-padding4);
     }
 }
 
 @media (max-width: 600px) {
     body {
-        padding-top: 20px;
+        padding-top: var(--standard-padding20);
     }
 
     .form-container {
-        padding: 15px;
+        padding: var(--standard-padding15);
     }
 
     input[type="text"], input[type="email"] {
         font-size: 0.9rem;
-        padding: 8px;
+        padding: var(--standard-padding8);
         width: 90%;
     }
 
     .button {
-        padding: 8px 18px;
+        padding: var(--standard-padding8-18);
         font-size: 0.9rem;
     }
 
     .forgelegend-image {
         width: 100px;
-        margin-left: 42%;
+        margin-left: var(--standard-margin-percentage42);
     }
 
     .price {
         font-size: 1rem;
-        padding: 4px;
+        padding: var(--standard-padding4);
     }
 }

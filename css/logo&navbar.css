@@ -7,7 +7,7 @@
     left: 20px;
     max-width: 200px;
     height: auto;
-    border-radius: 20px;
+    border-radius: var(--common-border-radius-px20);
 }
 
 .nav-bar{
@@ -17,10 +17,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px;
+    padding: var(--standard-padding20);
     width: auto;
     background: var(--logo-background-color);
-    border-radius: 10px;
+    border-radius: var(--common-border-radius-px10);
     border-style:double;
     z-index: 1000;
 }
@@ -29,8 +29,8 @@
     display: flex;
     align-items: center;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: var(--standard-padding0);
+    margin: var(--common-margin-0);
     gap: 15px;
     justify-content: center;
 }
@@ -48,7 +48,7 @@
     color: var(--navbar-primary-color);
     padding: 5px 2px;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: var(--common-border-radius-px5);
     transition: background-color 0.3s;
 }
 
@@ -63,7 +63,7 @@
     height: auto;
     max-width: 100%;
     background-color: var(--blue-color);
-    border-radius: 10%;
+    border-radius: var(--button-border-radius10);
 }
 
 .search form{
@@ -72,14 +72,14 @@
 }
 
 .search input [type=text-main] {
-    padding: 5px;
-    border-radius: 5px;
+    padding: var(--standard-padding5);
+    border-radius: var(--standard-padding5);
     border: 1px solid #ccc;
 }
 
 .search button {
     padding: 5px 10px;
-    margin-left: 5px;
+    margin-left: var(--standard-margin-px5);
     border-radius: 5px;
     background: var(--button-color);
     color: var(--primary-color)
@@ -122,7 +122,7 @@
     
         .navlinks li a {
             text-align: center;
-            padding: 10px;
+            padding: var(--standard-padding10);
             font-size: 0.9rem;
             color: var(--navbar-primary-color);
         }
@@ -133,7 +133,7 @@
         .navlinks li a {
             text-align: center;
             font-size: 0.8rem;
-            padding: 8px;
+            padding: var(--standard-padding8);
         }
         
         .logo {

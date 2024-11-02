@@ -17,23 +17,23 @@ body{
 
 main{
     display: flex;
-    margin-top: 17%;
+    margin-top: var(--standard-margin-percentage17);
 }
 
 .article{
     background-color: var(--game-text-background-color);
     position:relative;
     left: 3%;
-    margin-top: 0%;
-    margin-bottom: 10%;
+    margin-top: var(--standard-margin-percentage0);
+    margin-bottom: var(--standard-margin-percentage10);
     font-size: 1.45rem;
     width: 55%;
     max-width: 100%;
     word-wrap: break-word;
     text-align: left;
     line-height: 40px;
-    padding: 30px;
-    border-radius: 20px;
+    padding: var(--standard-padding30);
+    border-radius: var(--common-border-radius-px20);
 }
 
 .logo-img{
@@ -42,8 +42,8 @@ main{
     max-width: 30%;
     width: 100%;
     height: 100%;
-    border-radius: 10%;
-    margin-top: 0%;
+    border-radius: var(--button-border-radius10);
+    margin-top: var(--standard-margin-percentage10);
     margin-left: auto;
-    margin-right: 100px;
+    margin-right: var(--standard-margin-px100);
 }

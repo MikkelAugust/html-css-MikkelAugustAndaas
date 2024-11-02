@@ -5,7 +5,7 @@
 body {
     font-family: 'Changa', sans-serif;
     background-image: url("/assets/images/smoke.jpg2.jpg");
-    margin: 0;
+    margin: var(--common-margin-0);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,13 +19,13 @@ body {
 }
 
 main {
-    margin-top: 10%;
-    margin-right: 5%;
-    margin-bottom: 20px;
+    margin-top: var(--standard-margin-percentage10);
+    margin-right: var(--standard-margin-percentage5);
+    margin-bottom: var(--standard-margin-px20);
     position: sticky;
     justify-content: flex-end;
     display: flex;
-    padding: 10px 20px;
+    padding: var(--standard-padding10-20);
     text-decoration: none;
 }
 
@@ -34,9 +34,9 @@ main {
     display: block;
     width: 40%;
     height: auto;
-    border-radius: 10%;
-    margin-top: 10%;
-    margin-left: 50%;
+    border-radius: var(--button-border-radius10);
+    margin-top: var(--standard-margin-percentage10);
+    margin-left: var(--standard-margin-percentage50);
     margin-right: auto;
 }
 
@@ -52,8 +52,8 @@ main {
     word-wrap: break-word;
     text-align: left;
     line-height: 40px;
-    padding: 30px;
-    border-radius: 20px;
+    padding: var(--standard-padding30);
+    border-radius: var(--common-border-radius-px20);
 }
 
 .price {
@@ -63,14 +63,14 @@ main {
     border-style:dotted;
     border-color: green;
     max-width: 7.3%;
-    margin-left: 90%;
+    margin-left: var(--standard-margin-percentage90);
 }
 
 
 .button1 {
     position: fixed;
     font-size: 1rem;
-    padding: 15px 32px;
+    padding: var(--padding-padding15-32);
     right: 5%;
     bottom: 3%;
     border-radius: var(--button-border-radius10);
@@ -91,63 +91,63 @@ main {
     }
 
     main {
-        margin-top: 0%;
-        margin-bottom: 20%px;
+        margin-top: var(--standard-margin-percentage0);
+        margin-bottom: var(--standard-margin-px20);
         justify-content: center;
-        padding: 5px;
+        padding: var(--standard-padding5);
     }
 
     .gamecover {
         max-width: 25%;
-        margin-top: 40%;
+        margin-top: var(--standard-margin-percentage40);
     }
 
     .gametext {
         font-size: 0.75rem;
         line-height: 1.6;
-        padding: 10px;
-        margin-top: 30%;
-        margin-right: 50%;
+        padding: var(--standard-padding10);
+        margin-top: var(--standard-margin-percentage30);
+        margin-right: var(--standard-margin-percentage50);
     }
 
     .button1 {
         font-size: 0.875rem;
-        padding: 10px 20px;
+        padding: var(--standard-padding10-20);
         right: 2%;
         bottom: 2%;
-        margin-bottom: 10%;
+        margin-bottom: var(--standard-margin-percentage10);
     }
 
     .price {
         font-size: 0.75rem;
-        margin-left: 70%;
+        margin-left: var(--standard-margin-percentage70);
     }
 }
 
 
 @media (max-width: 480px) {
     main {
-        margin-top: 10%;
-        margin-bottom: 0%;
+        margin-top: var(--standard-margin-percentage10);
+        margin-bottom: var(--standard-margin-percentage0);
     }
 
     .gamecover {
         max-width: 20%;
-        margin-top: 60%;
+        margin-top: var(--standard-margin-percentage60);
         right: 20%;
     }
 
     .gametext {
-        margin-top: 0;
+        margin-top: var(--common-margin-0);
         font-size: 0.7rem;
         line-height: 1.4;
-        padding: 10px;
+        padding: var(--standard-padding10);
     }
 
     .button1 {
         font-size: 0.75rem;
-        padding: 8px 16px;
-        margin-bottom: 20%;
+        padding: var(--standard-padding8-16);
+        margin-bottom: var(--standard-margin-percentage20);
     }
 
     .price {

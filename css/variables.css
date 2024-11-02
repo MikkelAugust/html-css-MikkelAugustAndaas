@@ -1,5 +1,7 @@
 :root {
     --primary-color: #ffffff;
+    --secoundary-color:  #000000;
+
     --red-color: rgb(255, 63, 95);
     --blue-color: rgb(3, 59, 133);
     --color-image-placeholder: rgba(255, 255, 255, 0.1);
@@ -7,11 +9,72 @@
     --game-text-background-color: #35353593;
     --logo-background-color: rgb(170, 170, 170);
     --navbar-primary-color: rgb(27, 28, 88);
-    --standard-padding: 10px;
+
     --common-font-size: 1rem;
+    --common-text-font-size: 1,45rem;
+    --common-min-height: 100vh;
+
+    --standard-top-padding: 150px;
+
+    --standard-padding0: 0px;
+    --standard-padding4: 4px;
+    --standard-padding5: 5px;
+    --standard-padding8: 8px;
+    --standard-padding10: 10px;
+    --standard-padding15: 15px;
+    --standard-padding20: 20px;
+    --standard-padding30: 30px;
+
+    --standard-padding8-16: 8px 16px;
+    --standard-padding8-18:  8px 18px;
+    --standard-padding10-20:  10px 20px;
+    --standard-padding10-20: 10px 20px;
+    --padding-padding15-32:  15px 32px;
+
+    --standard-margin-auto-percentage: 10% auto;
+
+    --standard-margin-auto-px: 20px auto;
+
+    --common-margin-0: 0;
+
+    --standard-margin-percentage0: 0%;
+    --standard-margin-percentage5: 5%;
+    --standard-margin-percentage10: 10%;
+    --standard-margin-percentage15: 15%;
+    --standard-margin-percentage17: 17%;
+    --standard-margin-percentage20: 20%;
+    --standard-margin-percentage30: 30%;
+    --standard-margin-percentage37: 37%;
+    --standard-margin-percentage38: 38%;
+    --standard-margin-percentage40: 40%;
+    --standard-margin-percentage42: 42%;
+    --standard-margin-percentage50: 50%;
+    --standard-margin-percentage60: 60%;
+    --standard-margin-percentage70: 70%;
+    --standard-margin-percentage90: 90%;
+
+    --standard-margin-bottom: 150px;
+
+    --standard-margin-px5: 5px;
+    --standard-margin-px10: 10px;
+    --standard-margin-px15: 15px;
+    --standard-margin-px16: 16px;
+    --standard-margin-px20: 20px;
+    --standard-margin-px40: 40px;
+    --standard-margin-px100: 100px;
+    --standard-margin-px300: 300px;
+    --standard-margin-px370: 370px;
+
     --navbar-border-radius10: 10px;
+
+    --button-border-radius1: 1%;
+    --button-border-radius5: 5%;
     --button-border-radius10: 10%;
     --button-border-radius20: 20%;
     --button-border-radius50: 50%;
-    --common-text-font-size: 1,45rem;
+
+    --common-border-radius-px5: 5px;
+    --common-border-radius-px10: 10px;
+    --common-border-radius-px20: 20px;
+    --common-border-radius-px30: 30px;
 }

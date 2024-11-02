@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat;
     font-family: 'Changa', sans-serif;
     box-sizing: border-box;
-    margin: 0;
+    margin: var(--common-margin-0);
     font-size: 1.45rem;
 }
 
@@ -17,36 +17,36 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15%;
-    margin-bottom: 10%;
+    margin-top: var(--standard-margin-percentage15);
+    margin-bottom: var(--standard-margin-percentage10);
 }
 
 .article {
     background-color: var(--game-text-background-color);
     width: 100%;
     max-width: 40%;
-    padding: 30px;
-    border-radius: 1%;
-    margin-bottom: 40px;
+    padding: var(--standard-padding30);
+    border-radius: var(--button-border-radius1);
+    margin-bottom: var(--standard-margin-px40);
     text-align: left;
 }
 
 .logo-img {
     max-width: 30%;
     border-radius: var(--button-border-radius10);
-    margin: 20px auto;
+    margin: var(--standard-margin-auto-px);
     background-color: var(--logo-background-color);
 }
 
 /* Text Box Styles */
 .textbox {
-    margin-bottom: 15px;
-    margin-left: 16px;
+    margin-bottom: var(--standard-margin-px15);
+    margin-left: var(--standard-margin-px16);
 }
 
 .contact-details {
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: var(--standard-margin-px20);
 }
 
 /* Input Styles */
@@ -59,11 +59,11 @@ main {
 /* Button Styles */
 .button {
     font-size: 1rem;
-    padding: 15px 32px;
+    padding: var(--padding-padding15-32);
     border-radius: var(--button-border-radius10);
     background-color: var(--blue-color);
     border: none;
-    color: white;
+    color: var(--primary-color);
     cursor: pointer;
 }
 
@@ -78,12 +78,12 @@ main {
     }
 
     main {
-        margin-bottom: 150px;
+        margin-bottom: var(--standard-margin-bottom);
     }
 
     .button {
         font-size: 0.875rem;
-        padding: 10px 20px;
+        padding: var(--standard-padding10-20);
     }
 }
 
@@ -93,12 +93,12 @@ main {
     }
 
     main {
-        margin-top: 20%;
+        margin-top: var(--standard-margin-percentage20);
     }
 
     .button {
-        margin: 10%;
+        margin: var(--standard-margin-percentage10);
         font-size: 0.75rem;
-        padding: 8px 16px;
+        padding: var(--standard-padding8-16);
     }
 }
