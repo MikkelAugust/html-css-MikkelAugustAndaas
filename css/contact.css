@@ -56,7 +56,6 @@ main {
     padding: var(--standard-padding);
 }
 
-/* Button Styles */
 .button {
     font-size: 1rem;
     padding: var(--padding-padding15-32);
