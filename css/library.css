@@ -1,16 +1,14 @@
 @import url('variables.css');
-@import url('styles.css');
 @import url('logo&navbar.css');
 
 body {
-    font-family: 'Changa', sans-serif;
     background-image: url("/assets/images/background.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.library-image-conteiner {
+.library-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,8 +16,40 @@ body {
     border-radius: var(--common-border-radius-px30);
     padding: var(--standard-padding20);
     margin: var(--standard-margin-px20) auto;
-    width: 90%;
-    max-width: 1200px;
+    max-width: 100%;
+}
+
+.game-text {
+    display: block;
+    background-color: rgba(81, 33, 112, 0.952);
+    text-align: left;
+    border-radius: 20px;
+    margin-bottom: 50%;
+    margin-top: 50%;
+    width: 100%;
+    margin: 20px;
+    margin-left: 10%;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Changa', sans-serif;
+    color: rgb(172, 172, 255);
+    text-shadow: 0px 4px 8px rgb(17, 17, 255);
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primary-color);
+    margin: 20px;
+    padding: 5px;
+    line-height: 1.6;
+    font-size: 15px;
 }
 
 .library-image-grid {
@@ -30,13 +60,16 @@ body {
     padding: var(--standard-padding0);
     margin: var(--common-margin-0);
     width: 100%;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
 }
 
 .library-image-placeholder {
     background-color: var(--color-image-placeholder);
     border-radius: var(--common-border-radius-px10);
     width: 100%;
-    max-width: 200px;
+    min-width: 50px;
     height: auto;
     object-fit: cover;
     transition: transform 0.3s ease;
@@ -62,48 +95,95 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.assassin {
+.assassin:hover {
     background: linear-gradient(90deg, #9D0000, #BB7814);
+    box-shadow: 0 4px 50px red;
 }
 
-.black {
+.black:hover {
     background: linear-gradient(90deg, #0A2E8C, #9D0000);
+    box-shadow: 0 4px 50px blue;
 }
 
-.boxer {
+.boxer:hover {
     background: linear-gradient(90deg, #000000, #9D0000);
+    box-shadow: 0 4px 50px red;
 }
 
-.cyberpunk {
+.cyberpunk:hover {
     background: linear-gradient(90deg, #B961FF, #58009D);
+    box-shadow: 0 4px 50px purple;
 }
 
-.forgelegend {
+.forgelegend:hover {
     background: linear-gradient(90deg, #3A5EDB, #D38C4B);
+    box-shadow: 0 4px 50px orange;
 }
 
-.furious {
+.furious:hover {
     background: linear-gradient(90deg, #83F7FF, #7300FF);
+    box-shadow: 0 4px 50px rgb(74, 0, 158);
 }
 
-.pingpong {
+.pingpong:hover {
     background: linear-gradient(90deg, #4D73D4, #CE240E);
+    box-shadow: 0 4px 50px rgb(0, 91, 209);
 }
 
-.racing {
+.racing:hover {
     background: linear-gradient(90deg, #000000, #9D0000);
+    box-shadow: 0 4px 50px black;
 }
 
-.spacewar {
+.spacewar:hover {
     background: linear-gradient(90deg, #8E8E8E, #2400FF);
+    box-shadow: 0 4px 50px rgb(65, 65, 255);
 }
 
-.superduper {
+.superduper:hover {
     background: linear-gradient(90deg, #DBCB3A, #4B82D3);
+    box-shadow: 0 4px 50px rgb(223, 255, 41);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1700px) {
+    h1 {
+        font-size: 88px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1500px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .game-text {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1400px) {
+
+    h1 {
+        font-size: 20px;
+        margin: 5px;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 5px;
+    }
+}
+
+@media (min-width: 1100px) {
     .image-grid, .library-image-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+        grid-template-columns: repeat(3, 1fr);
     }
 }

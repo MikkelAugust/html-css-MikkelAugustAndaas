@@ -1,8 +1,6 @@
 @import url('variables.css');
 @import url('logo&navbar.css');
-@import url('imageconteiner.css');
 @import url('footer.css');
-
 
 body {
     font-family: 'Changa', sans-serif;
@@ -18,12 +16,22 @@ body {
 
 main {
     margin-top: var(--standard-margin-px370);
-    position: sticky;
     justify-content: center;
+    position: sticky;
     display: flex;
     text-decoration: none;
     list-style: none;
 }
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    list-style: none;
+}
+
 
 .explore {
     position: sticky;
@@ -40,15 +48,23 @@ main {
     margin-right: var(--standard-margin-px300);
 }
 
+.explore a {
+    padding: var(--standard-padding10);
+    flex: auto;
+}
+
 .explore:hover {
     background-color: var(--red-color);
     display: flex;
 }
 
-.explore a {
-    padding: var(--standard-padding10);
-    flex: auto;
+.image-placeholder-container:hover {
+    box-shadow: 0 4px 50px rgb(95, 76, 202);
 }
+
+
+
+
 
 @media (max-width: 700px) {
     .explore {

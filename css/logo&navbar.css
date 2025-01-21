@@ -59,11 +59,17 @@
 } 
 
 .cart {
+    margin-left: 10px;
     width: 30px;
     height: auto;
     max-width: 100%;
     background-color: var(--blue-color);
     border-radius: var(--button-border-radius10);
+    transition: background-color 0.3s;
+}
+
+form {
+    margin-left: 10px;
 }
 
 .search form{
@@ -85,12 +91,31 @@
     color: var(--primary-color)
 }
 
+form button:hover {
+    background-color: var(--red-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 3px;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
 .navlinks li a:hover {
     background-color: var(--red-color);
     color: var(--primary-color);
     max-width: 100%;
     max-height: 35px;
+    transform: translateY(-2px);
     }
+    
+.cart:hover {
+    background-color: var(--red-color);
+    transform: translateY(-2px);
+}
+
+.head-png:hover {
+    transform: translateY(-4px);
+} 
 
     @media (max-width: 800px) {
 

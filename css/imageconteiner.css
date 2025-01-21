@@ -26,7 +26,6 @@
     width: 100%;
     max-width: 200px;
     height: auto;
-    transition-property: transform;
     transition-duration: 0.3s;
     transition-timing-function: ease;
     transition-delay: 0s;
