@@ -45,7 +45,9 @@ header .icon-cart span{
 
 .listproduct .item img{
     width: 20%;
-    filter: drop-shadow(0 50px 20px #0009)
+    height: auto;
+    filter: drop-shadow(0 30px 10px #0009);
+    border-radius: 5px;
 }
 
 .listproduct{
@@ -70,6 +72,22 @@ header .icon-cart span{
     font-size: small;
 }
 
+.black-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.black-image img {
+    width: 100%;
+    height: auto;
+}
+
 .listproduct .item button{
     background-color: #353432;
     color: white;
@@ -80,21 +98,28 @@ header .icon-cart span{
     cursor: pointer;
 }
 
-.carttab{
+.carttab {
     width: 400px;
     background-color: #353432;
     color: white;
     position: fixed;
     inset: 0 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding-bottom: 20px;
 }
 
 .carttab h1 {
     padding: 20px;
     margin: 0;
     font-weight: 300;
+    text-align: left;
 }
 
 .carttab .btn {
+    color: white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -109,4 +134,31 @@ header .icon-cart span{
 
 .carttab .btn .close{
     background-color: white;
+}
+
+.carttab .listcart {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.carttab .listcart .item {
+    width: 20%;
+}
+
+.carttab .listcart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listcart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: var(--primary-color);
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
 }
