@@ -1,10 +1,12 @@
 @import url('variables.css');
 @import url('logo&navbar.css');
 @import url('footer.css');
+@import url('cart.css');
+@import url('overlay.css');
 
 body {
     font-family: 'Changa', sans-serif;
-    background-image: url("/assets/images/background.webp");
+    background-image: url("/images/background.webp");
     background-size: cover;
     background-position: center;
     color: var(--primary-color);
@@ -12,6 +14,43 @@ body {
     display: flex;
     flex-direction:column;
     min-height: var(--common-min-height);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+header .shopping {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .shopping img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+header .shopping .quantity {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff4500;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -62,9 +101,15 @@ li {
     box-shadow: 0 4px 50px rgb(95, 76, 202);
 }
 
-
-
-
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 @media (max-width: 700px) {
     .explore {

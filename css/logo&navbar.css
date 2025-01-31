@@ -18,10 +18,11 @@
     justify-content: flex-end;
     align-items: center;
     padding: var(--standard-padding20);
-    width: auto;
+    width: 500px;
     background: var(--logo-background-color);
     border-radius: var(--common-border-radius-px10);
     border-style:double;
+    border-color: var(--navbar-primary-color);
     z-index: 1000;
 }
 
@@ -31,7 +32,7 @@
     list-style: none;
     padding: var(--standard-padding0);
     margin: var(--common-margin-0);
-    gap: 15px;
+    gap: 10px;
     justify-content: center;
 }
   
@@ -47,22 +48,32 @@
     text-decoration: none;
     color: var(--navbar-primary-color);
     padding: 5px 2px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     border-radius: var(--common-border-radius-px5);
     transition: background-color 0.3s;
 }
 
 .head-png{
-    width: 40px;
+    width: 100%;
     height: auto;
-    max-width: 100%;
 } 
 
-.cart {
-    margin-left: 10px;
-    width: 30px;
+.cart-a {
+    display: inline-block;  /* Ensure the <a> tag wraps the image */
+    width: auto;            /* Width adjusts to image size */
+    height: auto;           /* Height adjusts to image size */
+    margin-left: 10px;      /* Space to the left of the cart */
+}
+
+.cart-a img {
+    width: 100%;
     height: auto;
     max-width: 100%;
+}
+
+.cart {
+    width: 36px;
+    height: auto;
     background-color: var(--blue-color);
     border-radius: var(--button-border-radius10);
     transition: background-color 0.3s;
@@ -106,6 +117,7 @@ form button:hover {
     max-width: 100%;
     max-height: 35px;
     transform: translateY(-2px);
+    text-decoration: underline;
     }
     
 .cart:hover {
@@ -114,10 +126,10 @@ form button:hover {
 }
 
 .head-png:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 } 
 
-    @media (max-width: 800px) {
+    @media (max-width: 500px) {
 
         .logo {
             max-width: 100px;
@@ -126,7 +138,8 @@ form button:hover {
         .nav-bar {
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
+            margin: 5px;
+            padding: 5px;
             align-items: flex-start;
             padding: 3px;
             max-width: 21%;
@@ -134,6 +147,7 @@ form button:hover {
         }
     
         .navlinks {
+            margin: 5px;
             flex-direction: column;
             gap: 10px;
             width: 100%;
@@ -151,21 +165,29 @@ form button:hover {
             font-size: 0.9rem;
             color: var(--navbar-primary-color);
         }
-
-    }
-    
-    @media (max-width: 300px) {
-        .navlinks li a {
-            text-align: center;
-            font-size: 0.8rem;
-            padding: var(--standard-padding8);
+        .head-png{
+            width: 100%;
+            height: auto;
+        } 
+        
+        .cart-a {
+            display: inline-block;
+            width: auto;
+            height: auto;
+            margin-left: 10px;
         }
         
-        .logo {
-            max-width: 100px;
+        img .cart {
+            max-width: 10px;
+            height: auto;
         }
-    
+        
         .cart {
-            width: 25px;
+            width: 36px;
+            height: auto;
+            background-color: var(--blue-color);
+            border-radius: var(--button-border-radius10);
+            transition: background-color 0.3s;
         }
+
     }

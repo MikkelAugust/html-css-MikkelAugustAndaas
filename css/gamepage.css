@@ -1,10 +1,12 @@
 @import url('variables.css');
 @import url('logo&navbar.css');
 @import url('footer.css');
+@import url('cart.css');
+@import url('overlay.css');
 
 body {
     font-family: 'Changa', sans-serif;
-    background-image: url("/assets/images/smoke.jpg2.jpg");
+    background-image: url("/images/smoke.jpg2.jpg");
     margin: var(--common-margin-0);
     background-size: cover;
     background-position: center;
@@ -68,19 +70,21 @@ main {
 
 
 .button1 {
+    color: white;
     position: fixed;
     font-size: 1rem;
     padding: var(--padding-padding15-32);
     right: 5%;
     bottom: 3%;
     border-radius: var(--button-border-radius10);
-    background-color: var(--blue-color);
-    border-color: var(--red-color);
+    background-color :salmon;
+    border-color: salmon;
 }
 
 
 .button1:hover {
-    background-color: var(--red-color);
+    color: white;
+    background-color: salmon;
     text-transform: uppercase;
 }
 

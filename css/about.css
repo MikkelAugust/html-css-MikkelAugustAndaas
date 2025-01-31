@@ -20,9 +20,9 @@ main{
     margin-top: var(--standard-margin-percentage17);
 }
 
-.article{
+.article {
     background-color: var(--game-text-background-color);
-    position:relative;
+    position: relative;
     left: 3%;
     margin-top: var(--standard-margin-percentage0);
     margin-bottom: var(--standard-margin-percentage10);
@@ -34,16 +34,41 @@ main{
     line-height: 40px;
     padding: var(--standard-padding30);
     border-radius: var(--common-border-radius-px20);
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
 }
 
-.logo-img{
-    background-color: var(--logo-background-color);
+.about-logo-img {
     display: block;
-    max-width: 30%;
-    width: 100%;
-    height: 100%;
+    margin: 100px;
+    background-color: var(--logo-background-color);
+    max-width: 600px;
+    height: 50%;
     border-radius: var(--button-border-radius10);
-    margin-top: var(--standard-margin-percentage10);
-    margin-left: auto;
-    margin-right: var(--standard-margin-px100);
+}
+
+@media (max-width: 1200px) {
+    .article {
+        width: 70%; /* Adjust width for medium screens */
+        padding: 20px; /* Reduced padding for smaller screens */
+        font-size: 1.3rem; /* Slightly smaller text */
+        line-height: 35px; /* Adjust line height to fit smaller text */
+    }
+}
+
+@media (max-width: 900px) {
+    .article {
+        width: 85%; /* Further reduce width on smaller screens */
+        font-size: 1.15rem; /* Even smaller text */
+        line-height: 30px; /* Adjust line height */
+        padding: 15px; /* Further reduce padding */
+    }
+}
+
+@media (max-width: 600px) {
+    .article {
+        width: 90%; /* Take almost full width on very small screens */
+        font-size: 1rem; /* Very small text for readability */
+        line-height: 25px; /* Compact line height */
+        padding: var(--standard-padding10); /* Even smaller padding */
+    }
 }

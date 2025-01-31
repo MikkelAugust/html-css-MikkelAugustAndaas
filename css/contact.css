@@ -11,6 +11,7 @@ body {
     box-sizing: border-box;
     margin: var(--common-margin-0);
     font-size: 1.45rem;
+    margin: 0 auto;
 }
 
 main {
@@ -31,14 +32,21 @@ main {
     text-align: left;
 }
 
+.image-box {
+    display: block;
+    width: 20%;
+}
+
 .logo-img {
-    max-width: 30%;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    max-width: 100%;
     border-radius: var(--button-border-radius10);
     margin: var(--standard-margin-auto-px);
     background-color: var(--logo-background-color);
 }
 
-/* Text Box Styles */
 .textbox {
     margin-bottom: var(--standard-margin-px15);
     margin-left: var(--standard-margin-px16);
@@ -49,7 +57,7 @@ main {
     margin-bottom: var(--standard-margin-px20);
 }
 
-/* Input Styles */
+
 .name, .email {
     border-radius: var(--button-border-radius10);
     width: 100%;

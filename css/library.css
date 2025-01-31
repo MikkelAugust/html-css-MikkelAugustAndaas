@@ -2,7 +2,7 @@
 @import url('logo&navbar.css');
 
 body {
-    background-image: url("/assets/images/background.webp");
+    background-image: url("/images/background.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,7 +40,7 @@ h1 {
     padding: 5px;
     text-align: center;
     text-decoration: underline;
-    font-size: 25px;
+    font-size: 55px;
 }
 
 p {
@@ -146,8 +146,12 @@ p {
 }
 
 @media (min-width: 1700px) {
+    .image-grid, .library-image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     h1 {
-        font-size: 88px;
+        font-size: 78px;
     }
 
     p {
@@ -156,12 +160,15 @@ p {
 }
 
 @media (min-width: 1500px) {
+    .image-grid, .library-image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
     h1 {
-        font-size: 20px;
+        font-size: 58px;
     }
 
     p {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .game-text {
@@ -170,20 +177,39 @@ p {
 }
 
 @media (min-width: 1400px) {
-
+    .image-grid, .library-image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
     h1 {
-        font-size: 20px;
-        margin: 5px;
+        font-size: 48px;
     }
 
     p {
-        font-size: 14px;
-        margin: 5px;
+        font-size: 20px;
     }
 }
 
 @media (min-width: 1100px) {
-    .image-grid, .library-image-grid {
+        .image-grid, .library-image-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .game-text {
+        text-align: left;
+        border-radius: 20px;
+        margin-bottom: 0%;
+        margin-top: 50%;
+        width: 100%;
+        margin: 20px;
+        margin-left: 10%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    p {
+        font-size: 24px;
     }
 }
