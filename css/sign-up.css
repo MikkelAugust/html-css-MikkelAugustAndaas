@@ -1,0 +1,95 @@
+@import url('variables.css');
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #0A2E8C, #800080);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);   
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+section {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 50%;
+}
+
+.gamehub-logo {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);   
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #0A2E8C;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.message a {
+    color: #ffffff;
+    text-decoration: underline;
+}

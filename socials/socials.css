@@ -1,0 +1,49 @@
+/* social.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  header h1 {
+    margin: 0;
+  }
+  header nav {
+    margin-top: 10px;
+  }
+  header nav button {
+    background: #555;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  header nav button:hover {
+    background: #777;
+  }
+  main {
+    padding: 20px;
+  }
+  section {
+    margin-bottom: 20px;
+  }
+  #profileList li, #searchResults li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  #profileList li:hover, #searchResults li:hover {
+    background: #f0f0f0;
+  }
+  #postsList li {
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 8px;
+  }

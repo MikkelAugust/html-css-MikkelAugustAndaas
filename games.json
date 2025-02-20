@@ -1,0 +1,184 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "title": "Assassin",
+      "description": "",
+      "genre": "Action",
+      "released": "2019",
+      "ageRating": "18+",
+      "price": 75.99,
+      "discountedPrice": 0,
+      "onSale": false,
+      "image": {
+        "url": "/images/assassin.jpg",
+        "alt": "Assassin Game Cover"
+      },
+      "tags": ["gamehub", "game"],
+      "favorite": true,
+      "link": "/games/assassin/index.html"
+    },
+    {
+      "id": "2",
+      "title": "Black",
+      "description": "",
+      "genre": "Si-fi / Action",
+      "released": "2012",
+      "ageRating": "16+",
+      "price": 49.99,
+      "discountedPrice": 15.99,
+      "onSale": true,
+      "image": {
+        "url": "/images/black.jpg",
+        "alt": "Black Game Cover"
+      },
+      "tags": ["gamehub", "game"],
+      "favorite": false,
+      "link": "/games/black/index.html"
+    },
+    {
+      "id": "3",
+      "title": "Boxer",
+      "description": "",
+      "genre": "Action",
+      "released": "2016",
+      "ageRating": "16+",
+      "price": 59.99,
+      "discountedPrice": 9.99,
+      "onSale": true,
+      "image": {
+        "url": "/images/boxer.jpg",
+        "alt": "Boxer Game Cover"
+      },
+      "tags": ["gamehub", "game"],
+      "favorite": false,
+      "link": "/games/boxer/index.html"
+    },
+    {
+      "id": "4",
+      "title": "CyberPunk",
+      "description": "",
+      "genre": "Adventure / Sci-fi / Action",
+      "released": "2015",
+      "ageRating": "16+",
+      "price": 49.99,
+      "discountedPrice": 0,
+      "onSale": false,
+      "image": {
+        "url": "/images/cyberpunk.jpg",
+        "alt": "CyberPunk Game Cover"
+      },
+      "tags": ["gamehub", "game"],
+      "favorite": true,
+      "link": "/games/cyberpunk/index.html"
+    },
+    {
+      "id": "5",
+      "title": "ForgeLegend",
+      "description": "Celebrate some of the world's supe duper Superheroes with augmented reality.",
+      "genre": "Adventure",
+      "released": "2022",
+      "ageRating": "16+",
+      "price": 79.99,
+      "discountedPrice": 0,
+      "onSale": false,
+      "image": {
+        "url": "/images/forgedlegend.jpg",
+        "alt": "ForgeLegend Game Cover"
+      },
+      "tags": ["gamehub", "game"],
+      "favorite": true,
+      "link": "/games/forgedlegend/index.html"
+    },
+    {
+      "id": "6",
+      "title": "Furious",
+      "description": "",
+      "genre": "Action / si-fi",
+      "released": "2020",
+      "ageRating": "12+",
+      "price": 39.99,
+      "discountedPrice": 9.99,
+      "onSale": true,
+      "image": {
+        "url": "/images/furious.jpg",
+        "alt": "Furious Game Cover"
+      },
+      "tags": ["gamehub", "game"],
+      "favorite": false,
+      "link": "/games/furious/index.html"
+    },
+    {
+      "id": "7",
+      "title": "Ping Pong Championship",
+      "description": "",
+      "genre": "Adventure / Sports",
+      "released": "2012",
+      "ageRating": "3+",
+      "price": 19.99,
+      "discountedPrice": 0,
+      "onSale": false,
+      "image": {
+        "url": "/images/ping-pong.jpg",
+        "alt": "Ping Pong Championship Game Cover"
+      },
+      "tags": ["gamehub", "game"],
+      "favorite": true,
+      "link": "/games/pingpongchampionship/index.html"
+    },
+    {
+      "id": "8",
+      "title": "Racing",
+      "description": "",
+      "genre": "Adventure / Sports",
+      "released": "20011",
+      "ageRating": "3+",
+      "price": 39.99,
+      "discountedPrice": 9.99,
+      "onSale": true,
+      "image": {
+        "url": "/images/racing.jpg",
+        "alt": "Racing Game Cover"
+      },
+      "tags": ["gamehub", "game"],
+      "favorite": false,
+      "link": "/games/racing/index.html"
+    },
+    {
+      "id": "9",
+      "title": "Space War",
+      "description": "",
+      "genre": "Adventure / Sci-fi / Action",
+      "released": "2017",
+      "ageRating": "12+",
+      "price": 59.99,
+      "discountedPrice": 0,
+      "onSale": false,
+      "image": {
+        "url": "/images/space-war.jpg",
+        "alt": "Space War Game Cover"
+      },
+      "tags": ["gamehub", "game"],
+      "favorite": true,
+      "link": "/games/spacewar/index.html"
+    },
+    {
+      "id": "10",
+      "title": "Super Duper",
+      "description": "Celebrate some of the world's supe duper Superheroes with augmented reality.",
+      "genre": "Adventure / Sports",
+      "released": "2006",
+      "ageRating": "3+",
+      "price": 25.99,
+      "discountedPrice": 15.99,
+      "onSale": true,
+      "image": {
+        "url": "/images/super-duper.jpg",
+        "alt": "Super Duper Game Cover"
+      },
+      "tags": ["gamehub", "game"],
+      "favorite": true,
+      "link": "/games/superduper/index.html"
+    }
+  ]
+}

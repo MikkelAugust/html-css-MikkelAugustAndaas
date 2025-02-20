@@ -1,13 +1,12 @@
 @import url('variables.css');
 @import url('logo&navbar.css');
-@import url('imageconteiner.css');
 @import url('footer.css');
+@import url('cart.css');
 
 body {
     background: var(--background-linear-color);
-    color: var(--primary-color);
     background-repeat: no-repeat;
-    font-family: 'Changa', sans-serif;
+    font-family: Arial, sans-serif;
     box-sizing: border-box;
     margin: var(--common-margin-0);
     font-size: 1.45rem;
@@ -20,6 +19,7 @@ main {
     align-items: center;
     margin-top: var(--standard-margin-percentage15);
     margin-bottom: var(--standard-margin-percentage10);
+    color: var(--primary-color);
 }
 
 .article {

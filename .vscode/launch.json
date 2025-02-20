@@ -6,7 +6,7 @@
     "configurations": [
         
         {
-            "type": "chrome",
+            "type": "firefox",
             "request": "launch",
             "name": "Open index.html",
             "file": "c:\\Users\\mikke\\OneDrive\\Dokumenter\\GitHub\\html-css-MikkelAugustAndaas\\forgelegend\\index.html"

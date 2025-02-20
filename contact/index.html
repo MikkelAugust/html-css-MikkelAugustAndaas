@@ -5,35 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Get in touch with us for any inquiries, support, or assistance regarding buying and selling games. Reach out through our contact page, where we’re ready to help you with all your gaming needs.">
     <link rel="stylesheet" href="/css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="/css/logo&navbar.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="/css/cartpage.css">
     <link rel="icon" href="/images/head.png">
+    <script src="/search/cart.js"></script>
+    <script src="/loader.js" async></script>
     <title>GameHub - Contact Us</title>
+    
 </head>
 
 <body>
     
-    <header>
+    <header class="custom-header">
         <section class="header-content">
-            <a href="/index.html"><img class="logo" src="/images/gamehub_logo.png" alt="GameHub Logo"></a>
+            <a href="/index.html"><img class="header-logo" src="/images/gamehub_logo.png" alt="GameHub Logo"></a>
         </section>
     
-        <nav class="nav-bar">
-            <a href="index.html"><img class="head-png" src="/images/head.png" alt="head icon"></a>
-            <ul class="navlinks">
-              <li class="library-text"><a href="/library/index.html">Library</a></li>
-              <li class="about-text"><a href="/about/index.html">About</a></li>
-              <li class="contact-text"><a href="/contact/index.html">Contact</a></li>
+        <nav class="header-nav">
+            <a href="index.html"><img class="header-icon" src="/images/head.png" alt="head icon"></a>
+            <ul class="header-nav-links">
+                <li class="header-library"><a href="/library/index.html">Library</a></li>
+                <li class="header-about"><a href="/about/index.html">About</a></li>
+                <li class="header-contact"><a href="/contact/index.html">Contact</a></li>
             </ul>
-
-            <form action="#">
-                <input type="text-main" placeholder="search.." name="search">
+    
+            <form class="header-search-form" action="#">
+                <input type="text" placeholder="search.." name="search">
                 <button type="submit">Submit</button>
             </form>
-            
-          <a href="/cart/emptycart/index.html"><img class="cart" src="/images/shoppingcart.png" alt="cart icon"/></a>
-
+    
+            <a id="cart-icon" class="header-cart" href="#">
+                <img class="cart-img" src="/images/shoppingcart.png" alt="Shopping Cart">
+            </a>
         </nav>
     </header>
 
@@ -90,6 +95,23 @@
             
         </div>
 </footer>
+
+    <!-- Overlay Cart -->
+    <div id="overlay-cart" class="overlay-cart">
+        <div class="overlay-content">
+            <h2>Your Cart</h2>
+            <div class="listcart">
+                <!-- Empty Cart Message -->
+                <div class="empty-cart-message">
+                    <p>Your cart is empty. Add some games to it!</p>
+                </div>
+            </div>
+            <div class="btn">
+                <button id="close-btn" class="close">Close</button>
+                <button class="checkout">CHECK OUT</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

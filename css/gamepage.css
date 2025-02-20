@@ -2,159 +2,180 @@
 @import url('logo&navbar.css');
 @import url('footer.css');
 @import url('cart.css');
-@import url('overlay.css');
 
 body {
-    font-family: 'Changa', sans-serif;
-    background-image: url("/images/smoke.jpg2.jpg");
-    margin: var(--common-margin-0);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--primary-color);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: var(--common-min-height);
-    font-size: 1.25rem;
-    overflow-x: hidden;
+  font-family: 'Changa', sans-serif;
+  background-image: url("/images/smoke.jpg2.jpg");
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  overflow-x: hidden;
 }
 
 main {
-    margin-top: var(--standard-margin-percentage10);
-    margin-right: var(--standard-margin-percentage5);
-    margin-bottom: var(--standard-margin-px20);
-    position: sticky;
-    justify-content: flex-end;
-    display: flex;
-    padding: var(--standard-padding10-20);
-    text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
+/* Container to align game cover and information side-by-side */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Game Cover Column */
+.game-cover-container {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .gamecover {
-    display: block;
-    width: 40%;
-    height: auto;
-    border-radius: var(--button-border-radius10);
-    margin-top: var(--standard-margin-percentage10);
-    margin-left: var(--standard-margin-percentage50);
-    margin-right: auto;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
+.gamecover:hover {
+  transform: scale(1.05);
+}
 
+/* Game Information Column */
+.game-info {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+/* Game Title */
+.gametitle {
+  font-size: 2rem;
+  margin: 0;
+  color: white;
+}
+
+/* Game Description Text */
 .gametext {
-    background-color: var(--game-text-background-color);
-    position: absolute;
-    left: 2%;
-    top: 20%;
-    font-size: 1.4rem;
-    width: 40%;
-    max-width: 100%;
-    word-wrap: break-word;
-    text-align: left;
-    line-height: 40px;
-    padding: var(--standard-padding30);
-    border-radius: var(--common-border-radius-px20);
+  background-color: rgba(46, 6, 138, 0.85);
+  color: white;
+  font-size: 1.1rem;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: left;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Game Details Section */
+.game-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 1rem;
+}
+
+.game-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* Price and Order Button Container */
+.price,
+.ordernow {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .price {
-    position: relative;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    border-style:dotted;
-    border-color: green;
-    max-width: 7.3%;
-    margin-left: var(--standard-margin-percentage90);
+  background-color: green;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  display: inline-block;
 }
 
-
+/* Order Now Button */
 .button1 {
-    color: white;
-    position: fixed;
-    font-size: 1rem;
-    padding: var(--padding-padding15-32);
-    right: 5%;
-    bottom: 3%;
-    border-radius: var(--button-border-radius10);
-    background-color :salmon;
-    border-color: salmon;
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 1.5rem;
 }
 
+.close {
+  background-color: transparent;
+  font-size: 2rem;
+  color: #ff4500;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
 
 .button1:hover {
-    color: white;
-    background-color: salmon;
-    text-transform: uppercase;
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  transform: scale(1.05);
 }
 
-
-@media (max-width: 1200px) {
-    body {
-        font-size: 1rem;
-    }
-
-    main {
-        margin-top: var(--standard-margin-percentage0);
-        margin-bottom: var(--standard-margin-px20);
-        justify-content: center;
-        padding: var(--standard-padding5);
-    }
-
-    .gamecover {
-        max-width: 25%;
-        margin-top: var(--standard-margin-percentage40);
-    }
-
-    .gametext {
-        font-size: 0.75rem;
-        line-height: 1.6;
-        padding: var(--standard-padding10);
-        margin-top: var(--standard-margin-percentage30);
-        margin-right: var(--standard-margin-percentage50);
-    }
-
-    .button1 {
-        font-size: 0.875rem;
-        padding: var(--standard-padding10-20);
-        right: 2%;
-        bottom: 2%;
-        margin-bottom: var(--standard-margin-percentage10);
-    }
-
-    .price {
-        font-size: 0.75rem;
-        margin-left: var(--standard-margin-percentage70);
-    }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .game-cover-container,
+  .game-info {
+    flex: none;
+    width: 90%;
+    max-width: 400px;
+  }
 }
-
 
 @media (max-width: 480px) {
-    main {
-        margin-top: var(--standard-margin-percentage10);
-        margin-bottom: var(--standard-margin-percentage0);
-    }
-
-    .gamecover {
-        max-width: 20%;
-        margin-top: var(--standard-margin-percentage60);
-        right: 20%;
-    }
-
-    .gametext {
-        margin-top: var(--common-margin-0);
-        font-size: 0.7rem;
-        line-height: 1.4;
-        padding: var(--standard-padding10);
-    }
-
-    .button1 {
-        font-size: 0.75rem;
-        padding: var(--standard-padding8-16);
-        margin-bottom: var(--standard-margin-percentage20);
-    }
-
-    .price {
-        font-size: 0.65rem;
-    }
+  .game-cover-container,
+  .game-info {
+    width: 100%;
+    max-width: 100%;
+  }
+  .gametext {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  .button1 {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
 }

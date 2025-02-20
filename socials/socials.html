@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameHub Social</title>
+  <link rel="stylesheet" href="/socials/socials-css/socials.css">
+</head>
+<body>
+  <header>
+    <h1>GameHub Social</h1>
+    <nav>
+      <button id="allProfilesBtn">All Profiles</button>
+      <button id="searchProfilesBtn">Search Profiles</button>
+    </nav>
+  </header>
+  <main>
+    <!-- Section to display list of profiles -->
+    <section id="profileListSection">
+      <h2>Profiles</h2>
+      <ul id="profileList"></ul>
+    </section>
+    <!-- Section for profile details (hidden by default) -->
+    <section id="profileDetailSection" style="display:none;">
+      <button id="backToList">← Back to Profiles</button>
+      <h2 id="profileName"></h2>
+      <p id="profileBio"></p>
+      <img id="profileBanner" src="" alt="Banner" style="max-width:100%;">
+      <img id="profileAvatar" src="" alt="Avatar" style="width:100px; height:100px;">
+      <div>
+        <span id="followersCount"></span> Followers | 
+        <span id="followingCount"></span> Following
+      </div>
+      <div id="profileActions">
+        <button id="followBtn">Follow</button>
+        <button id="unfollowBtn" style="display:none;">Unfollow</button>
+        <button id="editProfileBtn">Edit Profile</button>
+      </div>
+      <section id="postsSection">
+        <h3>Posts</h3>
+        <ul id="postsList"></ul>
+      </section>
+      <section id="editProfileSection" style="display:none;">
+        <h3>Edit Profile</h3>
+        <textarea id="editBio"></textarea><br>
+        <input type="text" id="editBannerUrl" placeholder="Banner URL"><br>
+        <input type="text" id="editBannerAlt" placeholder="Banner Alt"><br>
+        <input type="text" id="editAvatarUrl" placeholder="Avatar URL"><br>
+        <input type="text" id="editAvatarAlt" placeholder="Avatar Alt"><br>
+        <button id="saveProfileBtn">Save</button>
+        <button id="cancelEditBtn">Cancel</button>
+      </section>
+    </section>
+    <!-- Section for searching profiles -->
+    <section id="searchSection" style="display:none;">
+      <h2>Search Profiles</h2>
+      <input type="text" id="searchInput" placeholder="Enter name or bio keywords">
+      <button id="searchBtn">Search</button>
+      <ul id="searchResults"></ul>
+    </section>
+  </main>
+  <script src="/js/social.js"></script>
+</body>
+</html>

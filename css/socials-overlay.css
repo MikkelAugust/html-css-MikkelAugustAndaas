@@ -1,0 +1,160 @@
+@import url('variables.css');
+
+/* Fade in animation */
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Social Overlay Container */
+#socialOverlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  animation: fadeInOverlay 0.4s ease-out;
+}
+
+/* Inner Container with a cool gradient background */
+#socialOverlay .social-overlay-inner {
+  position: relative;
+  margin: 5% auto;
+  width: 90%;
+  max-width: 1000px;
+  height: 90%;
+  background: linear-gradient(135deg, #c9ebff, #a2d9ff);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Overlay Header */
+#socialOverlay .social-overlay-header {
+  background-color: #0059ff;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#socialOverlay .social-overlay-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Header Right: Search field and Close Button */
+.social-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-header-right input[type="text"] {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.social-header-right button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #fff;
+  color: #0059ff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social-header-right button:hover {
+  background-color: #e0e0e0;
+}
+
+#socialOverlay .social-overlay-close {
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#socialOverlay .social-overlay-close:hover,
+#socialOverlay .social-overlay-close:focus {
+  color: #ccc;
+}
+
+/* Tab Navigation */
+.social-overlay-nav {
+  display: flex;
+  background-color: #0077cc;
+  justify-content: center;
+}
+
+.social-overlay-nav .social-tab {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.social-overlay-nav .social-tab:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.social-overlay-nav .social-tab.active {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+/* Overlay Body */
+#socialOverlay .social-overlay-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Social Content (each tab) */
+.social-content {
+  display: none;
+}
+
+.social-content.active {
+  display: block;
+}
+
+/* Iframe styling if still using iframe (optional) */
+.social-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    background-color: #ff5555;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    z-index: 4000;
+  }
+  
+  .toast.active {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  

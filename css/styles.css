@@ -2,7 +2,6 @@
 @import url('logo&navbar.css');
 @import url('footer.css');
 @import url('cart.css');
-@import url('overlay.css');
 
 body {
     font-family: 'Changa', sans-serif;
@@ -12,15 +11,12 @@ body {
     color: var(--primary-color);
     box-sizing: border-box;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     min-height: var(--common-min-height);
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 150px;
 }
 
 header h1 {
@@ -60,6 +56,7 @@ main {
     display: flex;
     text-decoration: none;
     list-style: none;
+    margin-top: 110px;
 }
 
 .image-container {
@@ -67,10 +64,16 @@ main {
     flex-direction: row;
 }
 
+/* Added additional flex wrapping, centering, and gap for dynamic product listing */
+.image-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 li {
     list-style: none;
 }
-
 
 .explore {
     position: sticky;
@@ -82,9 +85,10 @@ li {
     max-height: auto;
     display: flex;
     padding: var(--standard-padding20);
-    margin: var(--standard-margin-auto-px);
+    margin: 20px;
     margin-left: var(--standard-margin-px300);
     margin-right: var(--standard-margin-px300);
+    margin-bottom: 100px;
 }
 
 .explore a {
@@ -92,13 +96,21 @@ li {
     flex: auto;
 }
 
+section {
+    margin-bottom: -2px;
+    max-width: 100%;
+    height: auto;
+}
+
 .explore:hover {
     background-color: var(--red-color);
     display: flex;
+    cursor: pointer;
 }
 
 .image-placeholder-container:hover {
     box-shadow: 0 4px 50px rgb(95, 76, 202);
+    cursor: pointer;
 }
 
 /* Container */
@@ -111,6 +123,61 @@ li {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* --- Alternative High Contrast, 3D-Styled Product Cards --- */
+.product-card {
+    background: rgba(20, 20, 20, 0.85);  /* Dark, translucent background */
+    border: 2px solid #ff4500;           /* Bright accent border */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    width: 260px;                       /* Slightly narrower card */
+    text-align: center;
+    color: #f9f9f9;                     /* Light text for high contrast */
+    margin: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);        /* Lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ff4500;          /* Accent border for images */
+}
+
+.product-card h3 {
+    font-size: 1.3rem;
+    margin: 0.7rem 0;
+    font-weight: bold;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.product-card button {
+    background: linear-gradient(45deg, #ff4500, #ff8c00);
+    border: none;
+    color: #fff;
+    padding: 8px 15px;
+    margin: 8px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.product-card button:hover {
+    background: linear-gradient(45deg, #ff8c00, #ff4500);
+}
+
+
 @media (max-width: 700px) {
     .explore {
         width: 90%;
@@ -120,11 +187,9 @@ li {
 }
 
 @media (max-width: 300px) {
-
-    body{
+    body {
         justify-content: center;
     }
-
     .explore {
         width: 100%;
         justify-content: center;

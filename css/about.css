@@ -2,6 +2,7 @@
 @import url('logo&navbar.css');
 @import url('imageconteiner.css');
 @import url('footer.css');
+@import url('cart.css');
 
 body{
     background: var(--background-linear-color);

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sign in to your account and access exclusive features. Log in securely with your username and password. New here? Create an account to get started!"
+    />
+    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/logo&navbar.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" href="/images/head.png" />
+    <script src="/script.js"></script>
+    <script src="/search/cart.js"></script>
+    <script src="/loader.js" async></script>
+    <title>GameHub Log In!</title>
+  </head>
+  <body>
+    <header class="custom-header">
+      <section class="header-content">
+        <a href="/index.html"
+          ><img class="header-logo" src="/images/gamehub_logo.png" alt="GameHub Logo"
+        /></a>
+      </section>
+
+      <nav class="header-nav">
+        <a href="/index.html"
+          ><img class="header-icon" src="/images/head.png" alt="head icon"
+        /></a>
+        <ul class="header-nav-links">
+          <li class="header-library">
+            <a href="/library/index.html">Library</a>
+          </li>
+          <li class="header-about">
+            <a href="/about/index.html">About</a>
+          </li>
+          <li class="header-contact">
+            <a href="/contact/index.html">Contact</a>
+          </li>
+        </ul>
+
+        <form class="header-search-form" action="#">
+          <input type="text" placeholder="search.." name="search" />
+          <button type="submit">Submit</button>
+        </form>
+
+        <a id="cart-icon" class="header-cart" href="#">
+          <img class="cart-img" src="/images/shoppingcart.png" alt="Shopping Cart" />
+        </a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <img src="/images/gamehub_logo.png" alt="GameHub Logo" class="gamehub-logo" />
+      <form id="loginForm">
+        <h2>Login</h2>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit">Log In</button>
+        <p class="message">
+          Don't have an account?
+          <a href="/sign-up/sign-up.html">Sign up</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- Overlay Cart -->
+    <div id="overlay-cart" class="overlay-cart">
+      <div class="overlay-content">
+        <h2>Your Cart</h2>
+        <div class="listcart">
+          <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="btn">
+          <button id="close-btn" class="close">×</button>
+          <button class="checkout">CHECK OUT</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include the main script handling authentication -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>

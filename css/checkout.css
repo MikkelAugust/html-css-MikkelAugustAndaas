@@ -1,5 +1,6 @@
 @import url('variables.css');
 @import url('footer.css');
+@import url('cart.css');
 
 body {
     background: var(--background-linear-color);

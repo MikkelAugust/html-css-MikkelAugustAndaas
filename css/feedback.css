@@ -1,5 +1,6 @@
 @import url('variables.css');
 @import url('footer.css');
+@import url('cart.css');
 
 body {
     background: var(--background-linear-color);
@@ -40,6 +41,15 @@ main {
     max-width: 500px;
     min-height: 250px;
     border-radius: var(--button-border-radius10);
+}
+
+.header-logo {
+    background-color: var(--logo-background-color);
+    max-width: 220px;
+    height: auto;
+    border-radius: var(--common-border-radius-px20);
+    transition: transform 0.3s ease-in-out;
+    margin: 10px 0 0 10px;
 }
 
 .v-icon{
