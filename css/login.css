@@ -1,15 +1,21 @@
 @import url('variables.css');
 @import url('logo&navbar.css');
+@import url('footer.css');
+@import url('cart.css');
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Changa', sans-serif;
     background: linear-gradient(to bottom right, #0A2E8C, #800080);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    flex-direction: column;
+    min-height: var(--common-min-height);
+}
+
+header {
+    margin-bottom: 150px;
 }
 
 .container {
@@ -23,7 +29,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    color: white;
+    margin-bottom: 220px;
 }
 
 section {
@@ -47,7 +53,6 @@ section {
     text-align: center;
 }
 
-
 h2 {
     margin-bottom: 20px;
 }
@@ -69,22 +74,6 @@ input {
     border: none;
     border-radius: 5px;
     font-size: 16px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #ffffff;
-    color: #0A2E8C;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #ccc;
 }
 
 .message {

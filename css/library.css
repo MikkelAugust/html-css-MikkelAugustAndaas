@@ -1,7 +1,7 @@
 @import url('variables.css');
 @import url('logo&navbar.css');
 @import url('footer.css');
-@import url('cartpage.css');
+@import url('cart.css');
 
 /* Reset default margins and paddings */
 html, body {
@@ -31,7 +31,8 @@ main {
   border-radius: 20px;
   padding: 30px;
   margin: 20px auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(90deg, #B961FF, #0a009d);
+  box-shadow: 0 4px 50px var(--blue-color);
 }
 
 /* Library text section */
@@ -41,7 +42,7 @@ main {
   padding: 20px;
   width: 100%;
   margin-bottom: 40px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
 }
 
 .h1-library {
@@ -55,6 +56,7 @@ main {
 }
 
 .p-library {
+  text-align: center;
   font-family: Georgia, serif;
   color: #bbbbbb;
   line-height: 1.5;
@@ -80,61 +82,12 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Game-Specific Hover Effects */
-.game-box.assassin:hover {
-    background: linear-gradient(90deg, #9D0000, #BB7814);
-    box-shadow: 0 4px 50px red;
-}
-
-.game-box.black:hover {
-    background: linear-gradient(90deg, #0A2E8C, #9D0000);
-    box-shadow: 0 4px 50px blue;
-}
-
-.game-box.boxer:hover {
-    background: linear-gradient(90deg, #000000, #9D0000);
-    box-shadow: 0 4px 50px red;
-}
-
-.game-box.cyberpunk:hover {
-    background: linear-gradient(90deg, #B961FF, #58009D);
-    box-shadow: 0 4px 50px purple;
-}
-
-.game-box.forgelegend:hover {
-    background: linear-gradient(90deg, #3A5EDB, #D38C4B);
-    box-shadow: 0 4px 50px orange;
-}
-
-.game-box.furious:hover {
-    background: linear-gradient(90deg, #83F7FF, #7300FF);
-    box-shadow: 0 4px 50px rgb(74, 0, 158);
-}
-
-.game-box.pingpong:hover {
-    background: linear-gradient(90deg, #4D73D4, #CE240E);
-    box-shadow: 0 4px 50px rgb(0, 91, 209);
-}
-
-.game-box.racing:hover {
-    background: linear-gradient(90deg, #000000, #9D0000);
-    box-shadow: 0 4px 50px black;
-}
-
-.game-box.spacewar:hover {
-    background: linear-gradient(90deg, #8E8E8E, #2400FF);
-    box-shadow: 0 4px 50px rgb(65, 65, 255);
-}
-
-.game-box.superduper:hover {
-    background: linear-gradient(90deg, #DBCB3A, #4B82D3);
-    box-shadow: 0 4px 50px rgb(223, 255, 41);
-}
-
 /* Hover effect for game boxes */
 .game-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(90deg, #B961FF, #58009D);
+  box-shadow: 0 4px 50px purple;
 }
 
 /* Styling for images within the game boxes */

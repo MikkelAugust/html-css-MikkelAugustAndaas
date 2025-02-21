@@ -1,129 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Dive into the ultimate 18+ gaming experience! Explore the latest games, reviews, and exclusive content tailored for mature gamers. Join a community of passionate gamers seeking thrilling adventures and competitive edge. Discover, play, and connect now!"
-    />
-    <link rel="stylesheet" href="/css/styles.css"/>
-    <link rel="stylesheet" href="/css/imageconteiner.css"/>
-    <link rel="stylesheet" href="/css/logo&navbar.css"/>
-    <link rel="stylesheet" href="/css/footer.css"/>
-    <link rel="stylesheet" href="/css/cart.css"/>
-    <link rel="stylesheet" href="/css/socials-overlay.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="icon" href="/images/head.png"/>
-    <script src="/search/cart.js" defer></script>
-    <script src="/loader.js" async></script>
-    <script src="/script.js" async></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+  name="description"
+  content="Dive into the ultimate 18+ gaming experience! Explore the latest games, reviews, and exclusive content tailored for mature gamers. Join a community of passionate gamers seeking thrilling adventures and competitive edge. Discover, play, and connect now!"/>
+  <link rel="stylesheet" href="/css/styles.css"/>
+  <link rel="stylesheet" href="/css/imageconteiner.css"/>
+  <link rel="stylesheet" href="/css/logo&navbar.css"/>
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="/css/cart.css" />
+  <link rel="stylesheet" href="/css/socials-overlay.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="icon" href="/images/head.png" />
+  <script src="/js/auth.js" defer></script>
+  <script src="/js/cart.js" defer></script>
+  <script src="/js/loader.js" async></script>
+  <script src="/js/script.js" async></script>
+  <script src="/js/products.js" async></script>
+  <script src="/js/game-page.js" async></script>
+  <script type="module" src="/js/socialOverlay.js"></script>
     <title>GameHub Home Page</title>
-  </head>
+</head>
 
-  <body>
-    <header class="custom-header">
-      <section class="header-content">
-        <a href="/index.html">
-          <img class="header-logo" src="/images/gamehub_logo.png" alt="GameHub Logo" />
-        </a>
-      </section>
-
-      <nav class="header-nav">
+<body>
+  <header class="custom-header">
+    <!-- Logo Section -->
+    <section class="header-content">
+      <a href="/index.html">
+        <img class="header-logo" src="/images/gamehub_logo.png" alt="GameHub Logo" />
+      </a>
+    </section>
+  
+    <!-- Navigation Section -->
+    <nav class="header-nav">
+      <div class="nav-left">
         <a href="/index.html">
           <img class="header-icon" src="/images/head.png" alt="head icon" />
         </a>
-        <ul class="header-nav-links">
-          <li class="header-library"><a href="/library/index.html">Library</a></li>
-          <li class="header-about"><a href="/about/index.html">About</a></li>
-          <li class="header-contact"><a href="/contact/index.html">Contact</a></li>
-<!-- Social Overlay Trigger in your header -->
-<!-- Social Overlay Trigger in your header remains unchanged -->
-<li class="header-social">
-    <a href="javascript:void(0);" id="openSocialOverlay" class="social-link">
-      <img class="earth-nobackground" src="/images/earth-nobackground.png" alt="Social Icon">
-    </a>
-  </li>
-  
-  <!-- Social Overlay (only one instance!) -->
-  <div id="socialOverlay">
-    <div class="social-overlay-inner">
-      <!-- Enhanced Overlay Header with Title, Search, and Close Button -->
-      <div class="social-overlay-header">
-        <div class="social-header-left">
-          <h2>Social Hub</h2>
-        </div>
-        <div class="social-header-right">
-          <input type="text" id="socialSearchInput" placeholder="Search profiles..." />
-          <button id="socialSearchBtn">Search</button>
-          <span class="social-overlay-close" id="closeSocialOverlay">&times;</span>
-        </div>
       </div>
-      <!-- Tab Navigation -->
-      <div class="social-overlay-nav">
-        <button class="social-tab active" data-tab="profiles">Profiles</button>
-        <button class="social-tab" data-tab="posts">Posts</button>
-        <button class="social-tab" data-tab="activity">Activity</button>
-      </div>
-      <!-- Overlay Body with Tab Content -->
-      <div class="social-overlay-body">
-        <div class="social-content" id="socialProfiles">
-          <p>Loading profiles...</p>
-          <!-- Profiles content will be loaded dynamically -->
-        </div>
-        <div class="social-content" id="socialPosts" style="display: none;">
-          <p>Loading posts...</p>
-        </div>
-        <div class="social-content" id="socialActivity" style="display: none;">
-          <p>Loading activity...</p>
-        </div>
-      </div>
-    </div>
-  </div>
-          
-        </ul>
-
-        <form class="header-search-form" action="#">
-          <input type="text" placeholder="search.." name="search" />
-          <button type="submit">Submit</button>
-        </form>
-
-        <a id="cart-icon" class="header-cart" href="#">
-            <div class="cart-icon-container">
-              <img class="cart-img" src="/images/shoppingcart.png" alt="Shopping Cart">
-              <span id="cartCount" class="cart-count"></span>
-            </div>
-          </a>
-          
-      </nav>
-    </header>
-
-    <!-- Main content remains unchanged -->
-    <main>
-      <ul class="image-container">
-        <li>
-          <a href="/games/spacewar/index.html">
-            <img class="image-placeholder-container" src="/images/space-war.jpg" alt="Space War Image" />
-          </a>
-        </li>
-        <li>
-          <a href="/games/forgelegend/index.html">
-            <img class="image-placeholder-container" src="/images/forgedlegend.jpg" alt="Forged Legend Image" />
-          </a>
-        </li>
-        <li>
-          <a href="/games/cyberpunk/index.html">
-            <img class="image-placeholder-container" src="/images/cyberpunk.jpg" alt="Cyberpunk Image" />
+      <ul class="header-nav-links">
+        <li class="header-library"><a href="/library/index.html">Library</a></li>
+        <li class="header-about"><a href="/about/index.html">About</a></li>
+        <li class="header-contact"><a href="/contact/index.html">Contact</a></li>
+        <li class="header-social">
+          <a href="javascript:void(0);" id="openSocialOverlay" class="social-link">
+            <img class="earth-nobackground" src="/images/earth-nobackground.png" alt="Social Icon" />
           </a>
         </li>
       </ul>
-    </main>
+      <form class="header-search-form" action="#">
+        <input type="text" placeholder="search.." name="search" />
+        <button type="submit">Submit</button>
+      </form>
+      <a id="cart-icon" class="header-cart" href="#">
+        <div class="cart-icon-container">
+          <img class="cart-img" src="/images/shoppingcart.png" alt="Shopping Cart" />
+          <span id="cartCount" class="cart-count"></span>
+        </div>
+      </a>
+    </nav>
+  </header>
 
-    <section>
-      <h1>
-        <a href="/library/index.html" class="explore">Explore</a>
-      </h1>
-    </section>
+  <main>
+    <ul class="image-container">
+      <li href="/game-page/game-page.html?id=26594301-ad8e-4691-a2ca-c774f50b1b21
+      "></li>
+      <li href="/game-page/game-page.html?id=26594301-ad8e-4691-a2ca-c774f50b1b21
+      "></li>
+      <li href="/game-page/game-page.html?id=26594301-ad8e-4691-a2ca-c774f50b1b21
+      "></li>
+    </ul>
+  </main>
+    
+
+  <section>
+    <h1>
+      <a href="/library/index.html" class="explore">Explore</a>
+    </h1>
+  </section>
 
 <footer>
 <div class="social-media">
@@ -132,18 +88,15 @@
         <a class="instagram-icon" href="https://www.instagram.com/"><img src="/images/instagram-logo.jpg" alt="Instagram icon" /></a>
         <a class="twitter-icon" href="https://twitter.com/"><img src="/images/x-logo.jpg" alt="Twitter icon" /></a>
 </div>
-    <div class="social-media">
-    <!-- Social media links -->
-    </div>
     <!-- Container for logged-out state -->
 <div id="loggedOutButtons">
-    <button class="sign-up-button" onclick="window.location.href='/sign-up/sign-up.html'">Sign Up</button>
-    <button class="login-button" onclick="window.location.href='/login/login.html'">Log In</button>
+    <button type="button" class="sign-up-button" onclick="window.location.href='/sign-up/sign-up.html'">Sign Up</button>
+    <button type="button" class="login-button" onclick="window.location.href='/login/login.html'">Log In</button>
 </div>
       <!-- Container for logged-in state -->
-<div id="loggedInButtons" style="display: none;">
-    <button class="logout-button">Log Out</button>
-</div>
+      <div id="loggedInButtons">
+        <button type="button" class="logout-button">Log Out</button>
+      </div>
 </footer>
 
     <!-- Overlay Cart (if needed) -->
@@ -154,69 +107,10 @@
           <!-- Cart items will be dynamically added here -->
         </div>
         <div class="btn">
-          <button id="close-btn" class="close">×</button>
-          <button class="checkout">CHECK OUT</button>
+          <button type="button" id="close-btn" class="close">×</button>
+          <button type="button" class="checkout">CHECK OUT</button>
         </div>
       </div>
     </div>
-
-    <!-- Socials Overlay -->
-    <div id="socialOverlay">
-      <div class="overlay-content">
-        <span class="close-overlay" id="closeSocialOverlay">&times;</span>
-        <h2>Social Hub</h2>
-        <!-- Insert your social page content here. This could be inlined HTML or an iframe, for example: -->
-        <p>Welcome to the Social Hub! Here you can see profiles, posts, and connect with other gamers.</p>
-        <!-- Optionally, load additional content dynamically -->
-      </div>
-    </div>
-
-    <!-- Sample inline script for login functionality -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const loginForm = document.getElementById("loginForm");
-        if (loginForm) {
-          loginForm.addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent the default form submission (page refresh)
-            // Retrieve the entered email and password
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            // Dummy authentication check (replace this with your real authentication logic)
-            if (email && password) {
-              // If login is successful, set a flag in localStorage
-              localStorage.setItem("loggedInUser", email);
-              // Optionally, store additional user data here
-              // Redirect to the home page so the header can update
-              window.location.href = "/index.html";
-            } else {
-              alert("Please enter both email and password.");
-            }
-          });
-        }
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const openSocialOverlay = document.getElementById("openSocialOverlay");
-        const socialOverlay = document.getElementById("socialOverlay");
-        const closeSocialOverlay = document.getElementById("closeSocialOverlay");
-
-        openSocialOverlay.addEventListener("click", function () {
-          socialOverlay.style.display = "block";
-        });
-
-        closeSocialOverlay.addEventListener("click", function () {
-          socialOverlay.style.display = "none";
-        });
-
-        // Optional: close overlay when clicking outside content
-        window.addEventListener("click", function (event) {
-          if (event.target === socialOverlay) {
-            socialOverlay.style.display = "none";
-          }
-        });
-      });
-    </script>
   </body>
 </html>

@@ -1,93 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta
       name="description"
       content="Sign in to your account and access exclusive features. Log in securely with your username and password. New here? Create an account to get started!"
     />
-    <link rel="stylesheet" href="/css/login.css" />
-    <link rel="stylesheet" href="/css/logo&navbar.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/cart.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="icon" href="/images/head.png" />
-    <script src="/script.js"></script>
-    <script src="/search/cart.js"></script>
-    <script src="/loader.js" async></script>
+    <link rel="stylesheet" href="/css/login.css"/>
+    <link rel="stylesheet" href="/css/logo&navbar.css"/>
+    <link rel="stylesheet" href="/css/footer.css"/>
+    <link rel="stylesheet" href="/css/cart.css"/>
+    <link rel="stylesheet" href="/css/socials-overlay.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="icon" href="/images/head.png"/>
+    <script src="/js/auth.js" defer></script>
+    <script src="/js/cart.js" defer></script>
+    <script src="/js/loader.js" async></script>
+    <script src="/js/script.js" async></script>
+    <script src="/js/products.js" async></script>
+    <script src="/js/game-page.js" async></script>
     <title>GameHub Log In!</title>
-  </head>
-  <body>
-    <header class="custom-header">
-      <section class="header-content">
-        <a href="/index.html"
-          ><img class="header-logo" src="/images/gamehub_logo.png" alt="GameHub Logo"
-        /></a>
-      </section>
+</head>
 
-      <nav class="header-nav">
-        <a href="/index.html"
-          ><img class="header-icon" src="/images/head.png" alt="head icon"
-        /></a>
-        <ul class="header-nav-links">
-          <li class="header-library">
-            <a href="/library/index.html">Library</a>
-          </li>
-          <li class="header-about">
-            <a href="/about/index.html">About</a>
-          </li>
-          <li class="header-contact">
-            <a href="/contact/index.html">Contact</a>
-          </li>
-        </ul>
-
-        <form class="header-search-form" action="#">
-          <input type="text" placeholder="search.." name="search" />
-          <button type="submit">Submit</button>
-        </form>
-
-        <a id="cart-icon" class="header-cart" href="#">
-          <img class="cart-img" src="/images/shoppingcart.png" alt="Shopping Cart" />
+<body>
+  <header class="custom-header">
+    <!-- Logo Section -->
+    <section class="header-content">
+      <a href="/index.html">
+        <img class="header-logo" src="/images/gamehub_logo.png" alt="GameHub Logo" />
+      </a>
+    </section>
+  
+    <!-- Navigation Section -->
+    <nav class="header-nav">
+      <div class="nav-left">
+        <a href="/index.html">
+          <img class="header-icon" src="/images/head.png" alt="head icon" />
         </a>
-      </nav>
-    </header>
+      </div>
+      <ul class="header-nav-links">
+        <li class="header-library"><a href="/library/index.html">Library</a></li>
+        <li class="header-about"><a href="/about/index.html">About</a></li>
+        <li class="header-contact"><a href="/contact/index.html">Contact</a></li>
+        <li class="header-social">
+          <a href="javascript:void(0);" id="openSocialOverlay" class="social-link">
+            <img class="earth-nobackground" src="/images/earth-nobackground.png" alt="Social Icon" />
+          </a>
+        </li>
+      </ul>
+      <form class="header-search-form" action="#">
+        <input type="text" placeholder="search.." name="search" />
+        <button type="submit">Submit</button>
+      </form>
+      <a id="cart-icon" class="header-cart" href="#">
+        <div class="cart-icon-container">
+          <img class="cart-img" src="/images/shoppingcart.png" alt="Shopping Cart" />
+          <span id="cartCount" class="cart-count"></span>
+        </div>
+      </a>
+    </nav>
+  </header>
 
     <div class="container">
       <img src="/images/gamehub_logo.png" alt="GameHub Logo" class="gamehub-logo" />
       <form id="loginForm">
-        <h2>Login</h2>
-        <div class="input-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="input-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required />
-        </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
         <button type="submit">Log In</button>
-        <p class="message">
-          Don't have an account?
-          <a href="/sign-up/sign-up.html">Sign up</a>
-        </p>
-      </form>
+      </form>      
+    </div>
+      
+<footer>
+    <div class="social-media">
+            <a class="facebook-icon" href="https://www.facebook.com/"><img src="/images/facebook-logo.jpg" alt="Facebook icon" /></a>
+            <a class="github-icon" href="https://github.com/"><img src="/images/github-logo.jpg" alt="GitHub icon" /></a>
+            <a class="instagram-icon" href="https://www.instagram.com/"><img src="/images/instagram-logo.jpg" alt="Instagram icon" /></a>
+            <a class="twitter-icon" href="https://twitter.com/"><img src="/images/x-logo.jpg" alt="Twitter icon" /></a>
     </div>
 
-    <!-- Overlay Cart -->
-    <div id="overlay-cart" class="overlay-cart">
-      <div class="overlay-content">
-        <h2>Your Cart</h2>
-        <div class="listcart">
-          <!-- Cart items will be dynamically added here -->
-        </div>
-        <div class="btn">
-          <button id="close-btn" class="close">×</button>
-          <button class="checkout">CHECK OUT</button>
-        </div>
-      </div>
+    <div id="loggedOutButtons">
+        <button type="button" class="sign-up-button" onclick="window.location.href='/sign-up/sign-up.html'">Sign Up</button>
+        <button type="button" class="login-button" onclick="window.location.href='/login/login.html'">Log In</button>
     </div>
 
-    <!-- Include the main script handling authentication -->
-    <script src="/js/script.js"></script>
-  </body>
+        <div id="loggedInButtons">
+      <button type="button" class="logout-button">Log Out</button>
+    </div>
+</footer>
+      
+
+          <div id="overlay-cart" class="overlay-cart">
+            <div class="overlay-content">
+              <h2>Your Cart</h2>
+              <div class="listcart">
+                <!-- Cart items will be dynamically added here -->
+              </div>
+              <div class="btn">
+                <button type="button" id="close-btn" class="close">×</button>
+                <button type="button" class="checkout">CHECK OUT</button>
+              </div>
+            </div>
+          </div>
+        </body>
 </html>

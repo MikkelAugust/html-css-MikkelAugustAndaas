@@ -1,4 +1,7 @@
 @import url('variables.css');
+@import url('logo&navbar.css');
+@import url('footer.css');
+@import url('cart.css');
 
 /* Fade in animation */
 @keyframes fadeInOverlay {
@@ -6,7 +9,6 @@
   to { opacity: 1; }
 }
 
-/* Social Overlay Container */
 #socialOverlay {
   display: none; /* Hidden by default */
   position: fixed;
@@ -15,146 +17,154 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(10, 0, 50, 0.9); /* Dark overlay */
   overflow: auto;
   animation: fadeInOverlay 0.4s ease-out;
 }
 
-/* Inner Container with a cool gradient background */
+/* Inner container with gradient */
 #socialOverlay .social-overlay-inner {
-  position: relative;
   margin: 5% auto;
   width: 90%;
-  max-width: 1000px;
+  max-width: 800px;
   height: 90%;
-  background: linear-gradient(135deg, #c9ebff, #a2d9ff);
+  background: linear-gradient(135deg, #2c003e, #03045e);
   border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-/* Overlay Header */
-#socialOverlay .social-overlay-header {
-  background-color: #0059ff;
+/* Header */
+.social-overlay-header {
+  background-color: #1a1a2e;
   color: #fff;
   padding: 15px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
-
-#socialOverlay .social-overlay-header h2 {
+.social-overlay-header h2 {
   margin: 0;
   font-size: 1.8rem;
 }
-
-/* Header Right: Search field and Close Button */
 .social-header-right {
   display: flex;
-  align-items: center;
   gap: 10px;
+  align-items: center;
 }
-
 .social-header-right input[type="text"] {
   padding: 5px 10px;
   border: none;
   border-radius: 4px;
+  background: #333;
+  color: #fff;
 }
-
 .social-header-right button {
   padding: 5px 10px;
   border: none;
-  background-color: #fff;
-  color: #0059ff;
+  background: #fff;
+  color: #1a1a2e;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
-
 .social-header-right button:hover {
-  background-color: #e0e0e0;
+  background: #444;
 }
-
-#socialOverlay .social-overlay-close {
+.social-overlay-close {
   font-size: 32px;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.3s ease;
 }
-
-#socialOverlay .social-overlay-close:hover,
-#socialOverlay .social-overlay-close:focus {
+.social-overlay-close:hover {
   color: #ccc;
 }
 
-/* Tab Navigation */
+/* Navigation Tabs */
 .social-overlay-nav {
   display: flex;
-  background-color: #0077cc;
+  background: #1a1a2e;
   justify-content: center;
 }
-
-.social-overlay-nav .social-tab {
+.social-tab {
   background: transparent;
   border: none;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 15px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
-
-.social-overlay-nav .social-tab:hover {
+.social-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.social-tab.active {
   background: rgba(255, 255, 255, 0.2);
-}
-
-.social-overlay-nav .social-tab.active {
-  background: rgba(255, 255, 255, 0.3);
   font-weight: bold;
 }
 
 /* Overlay Body */
-#socialOverlay .social-overlay-body {
+.social-overlay-body {
   flex: 1;
-  overflow-y: auto;
   padding: 20px;
-  background-color: #fff;
+  background: #121212;
+  color: #fff;
+  overflow-y: auto;
 }
 
-/* Social Content (each tab) */
+/* Social Content Sections */
 .social-content {
   display: none;
 }
-
 .social-content.active {
   display: block;
 }
 
-/* Iframe styling if still using iframe (optional) */
-.social-iframe {
-  width: 100%;
-  height: 100%;
+/* Form Styles for Profile Section */
+#profileForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#profileForm label {
+  font-weight: 600;
+}
+#profileForm input,
+#profileForm textarea {
+  padding: 8px;
   border: none;
+  border-radius: 4px;
+}
+#profileForm button {
+  padding: 10px;
+  background: #ff7e5f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#profileForm button:hover {
+  background: #feb47b;
 }
 
+/* Toast (if needed) remains unchanged */
 .toast {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%) translateY(100%);
-    background-color: #ff5555;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 4px;
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    z-index: 4000;
-  }
-  
-  .toast.active {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
-  }
-  
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  background-color: #ff5555;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 4000;
+}
+.toast.active {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}

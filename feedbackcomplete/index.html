@@ -12,88 +12,52 @@
     <link rel="stylesheet" href="/css/socials-overlay.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="icon" href="/images/head.png"/>
-    <script src="/search/cart.js" defer></script>
-    <script src="/loader.js" async></script>
-    <script src="/script.js" async></script>
+    <script src="/js/auth.js" defer></script>
+    <script src="/js/cart.js" defer></script>
+    <script src="/js/loader.js" async></script>
+    <script src="/js/script.js" async></script>
+    <script src="/js/products.js" async></script>
     <title>GameHub - Thank you for your feedback!</title>
-  </head>
-  <body>
+</head>
+
+<body>
+<header class="custom-header">
+
+    <section class="header-content">
+      <a href="/index.html">
+        <img class="header-logo" src="/images/gamehub_logo.png" alt="GameHub Logo" />
+      </a>
+    </section>
   
-    <header class="custom-header">
-      <section class="header-content">
-        <a href="/index.html">
-          <img class="header-logo" src="/images/gamehub_logo.png" alt="GameHub Logo" />
-        </a>
-      </section>
-  
-      <nav class="header-nav">
+
+  <nav class="header-nav">
+      <div class="nav-left">
         <a href="/index.html">
           <img class="header-icon" src="/images/head.png" alt="head icon" />
         </a>
-        <ul class="header-nav-links">
-          <li class="header-library"><a href="/library/index.html">Library</a></li>
-          <li class="header-about"><a href="/about/index.html">About</a></li>
-          <li class="header-contact"><a href="/contact/index.html">Contact</a></li>
-  <!-- Social Overlay Trigger in your header -->
-  <!-- Social Overlay Trigger in your header remains unchanged -->
-  <li class="header-social">
-    <a href="javascript:void(0);" id="openSocialOverlay" class="social-link">
-      <img class="earth-nobackground" src="/images/earth-nobackground.png" alt="Social Icon">
-    </a>
-  </li>
-  
-  <!-- Social Overlay (only one instance!) -->
-  <div id="socialOverlay">
-    <div class="social-overlay-inner">
-      <!-- Enhanced Overlay Header with Title, Search, and Close Button -->
-      <div class="social-overlay-header">
-        <div class="social-header-left">
-          <h2>Social Hub</h2>
-        </div>
-        <div class="social-header-right">
-          <input type="text" id="socialSearchInput" placeholder="Search profiles..." />
-          <button id="socialSearchBtn">Search</button>
-          <span class="social-overlay-close" id="closeSocialOverlay">&times;</span>
-        </div>
       </div>
-      <!-- Tab Navigation -->
-      <div class="social-overlay-nav">
-        <button class="social-tab active" data-tab="profiles">Profiles</button>
-        <button class="social-tab" data-tab="posts">Posts</button>
-        <button class="social-tab" data-tab="activity">Activity</button>
-      </div>
-      <!-- Overlay Body with Tab Content -->
-      <div class="social-overlay-body">
-        <div class="social-content" id="socialProfiles">
-          <p>Loading profiles...</p>
-          <!-- Profiles content will be loaded dynamically -->
-        </div>
-        <div class="social-content" id="socialPosts" style="display: none;">
-          <p>Loading posts...</p>
-        </div>
-        <div class="social-content" id="socialActivity" style="display: none;">
-          <p>Loading activity...</p>
-        </div>
-      </div>
-    </div>
-  </div>
-          
-        </ul>
-  
-        <form class="header-search-form" action="#">
-          <input type="text" placeholder="search.." name="search" />
-          <button type="submit">Submit</button>
-        </form>
-  
-        <a id="cart-icon" class="header-cart" href="#">
-            <div class="cart-icon-container">
-              <img class="cart-img" src="/images/shoppingcart.png" alt="Shopping Cart">
-              <span id="cartCount" class="cart-count"></span>
-            </div>
+      <ul class="header-nav-links">
+        <li class="header-library"><a href="/library/index.html">Library</a></li>
+        <li class="header-about"><a href="/about/index.html">About</a></li>
+        <li class="header-contact"><a href="/contact/index.html">Contact</a></li>
+        <li class="header-social">
+          <a href="javascript:void(0);" id="openSocialOverlay" class="social-link">
+            <img class="earth-nobackground" src="/images/earth-nobackground.png" alt="Social Icon" />
           </a>
-          
-      </nav>
-    </header>
+        </li>
+      </ul>
+      <form class="header-search-form" action="#">
+        <input type="text" placeholder="search.." name="search" />
+        <button type="submit">Submit</button>
+      </form>
+      <a id="cart-icon" class="header-cart" href="#">
+        <div class="cart-icon-container">
+          <img class="cart-img" src="/images/shoppingcart.png" alt="Shopping Cart" />
+          <span id="cartCount" class="cart-count"></span>
+        </div>
+      </a>
+    </nav>
+</header>
 
 <main>
     <section class="box">                     
@@ -116,12 +80,12 @@
         </div>
         <!-- Container for logged-out state -->
     <div id="loggedOutButtons">
-        <button class="sign-up-button" onclick="window.location.href='/sign-up/sign-up.html'">Sign Up</button>
-        <button class="login-button" onclick="window.location.href='/login/login.html'">Log In</button>
+        <button type="button" class="sign-up-button" onclick="window.location.href='/sign-up/sign-up.html'">Sign Up</button>
+        <button type="button" class="login-button" onclick="window.location.href='/login/login.html'">Log In</button>
     </div>
           <!-- Container for logged-in state -->
     <div id="loggedInButtons" style="display: none;">
-        <button class="logout-button">Log Out</button>
+        <button type="button" class="logout-button">Log Out</button>
     </div>
     </footer>
     
@@ -133,8 +97,8 @@
               <!-- Cart items will be dynamically added here -->
             </div>
             <div class="btn">
-              <button id="close-btn" class="close">×</button>
-              <button class="checkout">CHECK OUT</button>
+              <button type="button" id="close-btn" class="close">×</button>
+              <button type="button" class="checkout">CHECK OUT</button>
             </div>
           </div>
         </div>

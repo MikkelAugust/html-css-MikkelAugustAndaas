@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const cartItemsContainer = document.querySelector('.listcart');
     const checkoutButton = document.querySelector('.checkout');
     const cartCountEl = document.getElementById('cartCount');
+    window.addToCart = addToCart;
     
     // Ensure the cart overlay is hidden on page load
     if (overlayCart) {
@@ -113,15 +114,24 @@ document.addEventListener('DOMContentLoaded', function () {
             if (game) addToCart(game);
         });
     }
+
+    // Function to show a toast message
+function showToast(message, duration = 3000) {
+    const toastEl = document.getElementById('toast');
+    if (!toastEl) return;
     
-    // Fetch game data and set up the page
-    fetch('/games.json')
-        .then(response => response.json())
-        .then(data => {
-            setupGamePage(data.data);
-            updateCartUI();
-        })
-        .catch(error => console.error('Error loading the games:', error));
+    toastEl.textContent = message;
+    toastEl.classList.add('show');
+    
+    // Remove the toast after the specified duration
+    setTimeout(() => {
+      toastEl.classList.remove('show');
+    }, duration);
+  }
+  
+  // Make sure the function is available globally:
+  window.showToast = showToast;
+  
     
     // Cart overlay behavior: open only when the cart icon is clicked
     if (cartIcon) {

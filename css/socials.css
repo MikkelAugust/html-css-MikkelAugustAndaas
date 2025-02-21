@@ -1,4 +1,8 @@
-/* social.css */
+@import url('variables.css');
+@import url('logo&navbar.css');
+@import url('footer.css');
+@import url('cart.css');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -46,4 +50,12 @@ body {
     border: 1px solid #ddd;
     padding: 8px;
     margin-bottom: 8px;
+  }
+
+  .social-link:focus {
+    outline: none;
+  }
+
+  .social-link {
+    -webkit-tap-highlight-color: transparent; /* for mobile devices */
   }

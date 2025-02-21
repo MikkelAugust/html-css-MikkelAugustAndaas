@@ -5,6 +5,7 @@
 }
 
 footer {
+    position: relative;
     display: flex;
     align-items: center;
     bottom: 0;
@@ -15,7 +16,8 @@ footer {
     padding-top: var(--standard-padding10);
     color: var(--primary-color);
     background-color: rgb(0, 0, 0);
-    margin-top: auto;
+    padding-bottom: 0;
+    margin: 0 auto;
     min-height: 100%;
     min-width: 100%;
 }
@@ -56,6 +58,19 @@ footer {
     margin: 15px;
 }
 
+#loggedInButtons {
+    display: none;
+  }
+
+  /* Remove the focus outline from the logout button */
+  .logout-button:focus {
+    outline: none;
+  }
+
+  .logout-button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
 .sign-up-button:hover, .login-button:hover, .logout-button:hover {
     box-shadow: 0 4px 50px rgb(255, 113, 113);
     cursor: pointer;
@@ -63,6 +78,8 @@ footer {
 
 .twitter-icon:hover, .facebook-icon:hover, .instagram-icon:hover, .github-icon:hover {
     background-color: var(--red-color);
+    box-shadow: 0 4px 50px rgb(255, 113, 113);
+    cursor: pointer;
 }
 
 @media (max-width: 300px){

@@ -1,4 +1,7 @@
 @import url('variables.css');
+@import url('logo&navbar.css');
+@import url('footer.css');
+@import url('cart.css');
 
 /* Header Logo */
 .custom-header .header-logo {
@@ -39,7 +42,7 @@
     padding: 15px 30px;
     background-color: var(--logo-background-color);
     border-radius: var(--common-border-radius-px10);
-    border: double var(--navbar-primary-color);
+    border: thick black;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     width: auto;
@@ -77,8 +80,10 @@
     transform: translateY(-2px);
 }
 
-/* Cart Icon: adjust overall container size */
-/* Cart Icon Container: Keep container size, center image */
+.social-link {
+    display: block;
+}
+
 .custom-header .header-cart {
     position: relative;
     width: 45px;
@@ -103,27 +108,24 @@
     transform: scale(1.1);
 }
 
-/* Cart Image: 80% of container, centered */
 .cart-img {
     width: 80%;
     height: auto;
 }
 
-/* Cart Count: Positioned at the top right */
 .cart-count {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 9px;
+    right: 10px;
     transform: translate(50%, -50%);
     background: red;
     color: white;
     border-radius: 50%;
-    padding: 2px 6px;
+    padding: 2px 5px;
     font-size: 0.8rem;
     pointer-events: none;
 }
 
-/* Header Search Form */
 .custom-header .header-search-form {
     display: flex;
     align-items: center;

@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Thank you for your purchase! Your order has been successfully completed. Check your email for order details and get ready to enjoy your new games. Happy gaming!" />
+    <meta name="description" content="Checkout | GameHub – Complete your purchase and enjoy your new games! Enter your shipping and payment information to finalize your order." />
     <title>Checkout | GameHub</title>
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="/css/checkout-page.css" />
-    <link rel="stylesheet" href="/css/logo&navbar.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/cart.css" />
-    <link rel="stylesheet" href="/css/socials-overlay.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="icon" href="/images/head.png" />
-    <!-- Scripts -->
-    <script src="/search/cart.js" defer></script>
-    <script src="/loader.js" async></script>
-    <script src="/script.js" async></script>
-    <script src="/js/socials.js" async></script>
-  </head>
-  <body>
-    <!-- Header Section -->
-    <header class="custom-header">
-      <section class="header-content">
-        <a href="/index.html">
-          <img class="header-logo" src="/images/gamehub_logo.png" alt="GameHub Logo" />
-        </a>
-      </section>
-      <nav class="header-nav" aria-label="Main Navigation">
-        <a href="/index.html">
-          <img class="header-icon" src="/images/head.png" alt="Head Icon" />
-        </a>
-        <ul class="header-nav-links">
-          <li class="header-library"><a href="/library/index.html">Library</a></li>
-          <li class="header-about"><a href="/about/index.html">About</a></li>
-          <li class="header-contact"><a href="/contact/index.html">Contact</a></li>
-          <!-- Social Overlay Trigger -->
-          <li class="header-social">
-            <a href="javascript:void(0);" id="openSocialOverlay" class="social-link" aria-haspopup="dialog">
-              <img class="earth-nobackground" src="/images/earth-nobackground.png" alt="Social Icon">
-            </a>
-          </li>
-        </ul>
-        <form class="header-search-form" action="#" role="search">
-          <input type="text" placeholder="Search..." name="search" aria-label="Search" />
-          <button type="submit">Submit</button>
-        </form>
-        <a id="cart-icon" class="header-cart" href="#" aria-label="Shopping Cart">
-          <div class="cart-icon-container">
-            <img class="cart-img" src="/images/shoppingcart.png" alt="Shopping Cart" />
-            <span id="cartCount" class="cart-count" aria-live="polite"></span>
-          </div>
-        </a>
-      </nav>
-    </header>
+    <link rel="stylesheet" href="/css/logo&navbar.css"/>
+    <link rel="stylesheet" href="/css/footer.css"/>
+    <link rel="stylesheet" href="/css/cart.css"/>
+    <link rel="stylesheet" href="/css/socials-overlay.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="icon" href="/images/head.png"/>
+    <script src="/js/auth.js" defer></script>
+    <script src="/js/cart.js" defer></script>
+    <script src="/js/loader.js" async></script>
+    <script src="/js/script.js" async></script>
+    <script src="/js/products.js" async></script>
+    <script src="/js/checkout.js" async></script>
+</head>
 
-    <!-- Main Checkout Section -->
+<body>
+<header class="custom-header">
+
+    <section class="header-content">
+      <a href="/index.html">
+        <img class="header-logo" src="/images/gamehub_logo.png" alt="GameHub Logo" />
+      </a>
+    </section>
+  
+
+  <nav class="header-nav">
+      <div class="nav-left">
+        <a href="/index.html">
+          <img class="header-icon" src="/images/head.png" alt="head icon" />
+        </a>
+      </div>
+      <ul class="header-nav-links">
+        <li class="header-library"><a href="/library/index.html">Library</a></li>
+        <li class="header-about"><a href="/about/index.html">About</a></li>
+        <li class="header-contact"><a href="/contact/index.html">Contact</a></li>
+        <li class="header-social">
+          <a href="javascript:void(0);" id="openSocialOverlay" class="social-link">
+            <img class="earth-nobackground" src="/images/earth-nobackground.png" alt="Social Icon" />
+          </a>
+        </li>
+      </ul>
+      <form class="header-search-form" action="#">
+        <input type="text" placeholder="search.." name="search" />
+        <button type="submit">Submit</button>
+      </form>
+      <a id="cart-icon" class="header-cart" href="#">
+        <div class="cart-icon-container">
+          <img class="cart-img" src="/images/shoppingcart.png" alt="Shopping Cart" />
+          <span id="cartCount" class="cart-count"></span>
+        </div>
+      </a>
+  </nav>
+</header>
+
     <main>
-      <section class="checkout-container">
-        <h2>Checkout</h2>
-        <form id="checkoutForm" class="checkout-form" aria-labelledby="checkoutFormLabel">
+      <section class="checkout-container" aria-labelledby="checkoutTitle">
+        <h2 id="checkoutTitle">Checkout</h2>
+        <form id="checkoutForm" class="checkout-form" aria-describedby="orderSummary">
           <fieldset>
-            <legend id="checkoutFormLabel">Shipping Details</legend>
+            <legend>Shipping Details</legend>
             <div class="checkout-item">
               <label for="shippingName">Full Name</label>
               <input type="text" id="shippingName" name="shippingName" required />
@@ -88,12 +91,14 @@
         </form>
         <div id="orderSummary" class="order-summary" aria-live="polite">
           <h3>Order Summary</h3>
+          <div id="checkoutCartItems"></div>
           <p><strong>Total:</strong> $<span id="totalPrice"></span></p>
         </div>
       </section>
     </main>
+    
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
       <div class="social-media">
         <a class="facebook-icon" href="https://www.facebook.com/">
@@ -110,29 +115,30 @@
         </a>
       </div>
       <div id="loggedOutButtons">
-        <button class="sign-up-button" onclick="window.location.href='/sign-up/sign-up.html'">Sign Up</button>
-        <button class="login-button" onclick="window.location.href='/login/login.html'">Log In</button>
+        <button type="button" class="sign-up-button" onclick="window.location.href='/sign-up/sign-up.html'">Sign Up</button>
+        <button type="button" class="login-button" onclick="window.location.href='/login/login.html'">Log In</button>
       </div>
       <div id="loggedInButtons" style="display: none;">
-        <button class="logout-button">Log Out</button>
+        <button type="button" class="logout-button">Log Out</button>
       </div>
     </footer>
 
-    <!-- Cart Overlay -->
-    <div id="overlay-cart" class="overlay-cart" role="dialog" aria-modal="true">
-      <div class="overlay-content">
-        <h2>Your Cart</h2>
-        <div class="listcart" aria-live="polite">
-          <!-- Cart items will be dynamically added here -->
-        </div>
-        <div class="btn">
-          <button id="close-btn" class="close" aria-label="Close Cart">×</button>
-          <button class="checkout">CHECK OUT</button>
-        </div>
-      </div>
+ <!-- Overlay Cart (required for cart functionality) -->
+<div id="overlay-cart" class="overlay-cart">
+  <div class="overlay-content">
+    <h2>Your Cart</h2>
+    <div class="listcart">
+      <!-- Cart items will be dynamically added here -->
     </div>
+    <div class="btn">
+      <button type="button" id="close-btn" class="close">×</button>
+      <button type="button" class="checkout">CHECK OUT</button>
+    </div>
+  </div>
+</div>
 
-    <!-- Socials Overlay -->
+
+    <!-- Social Overlay -->
     <div id="socialOverlay" class="social-overlay" role="dialog" aria-modal="true">
       <div class="social-overlay-inner">
         <div class="social-overlay-header">
@@ -141,18 +147,18 @@
           </div>
           <div class="social-header-right">
             <input type="text" id="socialSearchInput" placeholder="Search profiles..." aria-label="Search Profiles">
-            <button id="socialSearchBtn">Search</button>
+            <button type="button" id="socialSearchBtn">Search</button>
             <span class="social-overlay-close" id="closeSocialOverlay" aria-label="Close Social Overlay">&times;</span>
           </div>
         </div>
         <div class="social-overlay-nav">
-          <button class="social-tab active" data-tab="profiles">Profiles</button>
-          <button class="social-tab" data-tab="posts">Posts</button>
-          <button class="social-tab" data-tab="activity">Activity</button>
+          <button type="button" class="social-tab active" data-tab="profiles">Profiles</button>
+          <button type="button" class="social-tab" data-tab="posts">Posts</button>
+          <button type="button" class="social-tab" data-tab="activity">Activity</button>
         </div>
         <div class="social-overlay-body">
           <div class="social-content" id="socialProfiles">
-            <p>Loading profiles...</p>
+            <div class="social-content active" id="socialProfiles"></div>
           </div>
           <div class="social-content" id="socialPosts" style="display: none;">
             <p>Loading posts...</p>
@@ -164,74 +170,5 @@
       </div>
     </div>
 
-    <!-- Inline Scripts for Login and Social Overlays -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Login functionality (if applicable) ...
-        const loginForm = document.getElementById("loginForm");
-        if (loginForm) {
-          loginForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            if (email && password) {
-              localStorage.setItem("loggedInUser", email);
-              window.location.href = "/index.html";
-            } else {
-              alert("Please enter both email and password.");
-            }
-          });
-        }
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const openSocialOverlay = document.getElementById("openSocialOverlay");
-        const socialOverlay = document.getElementById("socialOverlay");
-        const closeSocialOverlay = document.getElementById("closeSocialOverlay");
-        const tabButtons = document.querySelectorAll(".social-tab");
-        const tabContents = document.querySelectorAll(".social-content");
-  
-        openSocialOverlay.addEventListener("click", function () {
-          if (!localStorage.getItem("loggedInUser")) {
-            alert("Please log in to access the Social Hub.");
-            window.location.href = "/login/login.html";
-            return;
-          }
-          socialOverlay.style.display = "block";
-          activateTab("profiles");
-        });
-  
-        closeSocialOverlay.addEventListener("click", function () {
-          socialOverlay.style.display = "none";
-        });
-  
-        window.addEventListener("click", function (event) {
-          if (event.target === socialOverlay) {
-            socialOverlay.style.display = "none";
-          }
-        });
-  
-        tabButtons.forEach(btn => {
-          btn.addEventListener("click", function () {
-            const tab = this.getAttribute("data-tab");
-            activateTab(tab);
-          });
-        });
-  
-        function activateTab(tabName) {
-          tabButtons.forEach(btn => {
-            btn.classList.toggle("active", btn.getAttribute("data-tab") === tabName);
-          });
-          tabContents.forEach(content => {
-            content.style.display = (content.id === "social" + capitalizeFirstLetter(tabName)) ? "block" : "none";
-          });
-        }
-  
-        function capitalizeFirstLetter(string) {
-          return string.charAt(0).toUpperCase() + string.slice(1);
-        }
-      });
-    </script>
   </body>
 </html>

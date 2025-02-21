@@ -197,6 +197,26 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 4000;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+
 .checkout:hover {
   background: linear-gradient(45deg, #00a8e8, #005bb5);
   transform: scale(1.05);
