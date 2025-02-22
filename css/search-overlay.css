@@ -1,0 +1,157 @@
+@import url('variables.css');
+@import url('logo&navbar.css');
+@import url('footer.css');
+@import url('cart.css');
+
+/* Basic styling for the search form in the navbar */
+.header-search-form {
+    display: block;
+    position: relative;
+  }
+  
+  .header-search-form input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Styles for a full-screen overlay for search filters */
+  #searchOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  #searchOverlay.active {
+    display: flex;
+  }
+  
+  #searchOverlay .overlay-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #333;
+    overflow-y: auto;
+    max-height: 90vh;
+  }
+  
+  #searchOverlay .overlay-container h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  #searchOverlay .overlay-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #searchOverlay .overlay-container input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #searchOverlay .overlay-container fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #searchOverlay .overlay-container fieldset legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  #searchOverlay .overlay-container label {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #searchOverlay .overlay-container .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Container for search results */
+#gameSearchResults {
+    position: absolute;
+    top: 100%; /* Immediately below the search form */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    z-index: 9999;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none; /* Hidden by default */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  /* Individual result item styling */
+  .search-result {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .search-result:last-child {
+    border-bottom: none;
+  }
+  
+  .result-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .result-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .result-info {
+    flex: 1;
+  }
+  
+  .result-info h4 {
+    margin: 0 0 5px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .result-info p {
+    margin: 0 0 5px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .result-info a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  .result-info a:hover {
+    text-decoration: underline;
+  }  

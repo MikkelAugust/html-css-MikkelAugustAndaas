@@ -8,29 +8,28 @@
       content="Sign up for GameHub and gain access to exclusive features. Create an account to get started!"/>
     <link rel="stylesheet" href="/css/sign-up.css"/>
     <link rel="stylesheet" href="/css/logo&navbar.css"/>
-    <link rel="stylesheet" href="/css/footer.css"/>
-    <link rel="stylesheet" href="/css/cart.css"/>
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="stylesheet" href="/css/search-overlay.css" />
     <link rel="stylesheet" href="/css/socials-overlay.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="icon" href="/images/head.png"/>
-    <script src="/js/cart.js" defer></script>
+    <link rel="icon" href="/images/head.png" />
     <script src="/js/auth.js" defer></script>
+    <script src="/js/cart.js" defer></script>
+    <script src="/js/utils.js" async></script>
     <script src="/js/loader.js" async></script>
     <script src="/js/script.js" async></script>
     <script src="/js/products.js" async></script>
     <script src="/js/game-page.js" async></script>
-    <title>GameHub Sign Up!</title>
-  </head>
+    <script src="/js/game-search.js" async></script>
+    <script type="module" src="/js/socialOverlay.js"></script>
   <body>
     <header class="custom-header">
-      <!-- Logo Section -->
       <section class="header-content">
         <a href="/index.html">
           <img class="header-logo" src="/images/gamehub_logo.png" alt="GameHub Logo" />
         </a>
       </section>
-    
-      <!-- Navigation Section -->
       <nav class="header-nav">
         <div class="nav-left">
           <a href="/index.html">
@@ -47,10 +46,47 @@
             </a>
           </li>
         </ul>
-        <form class="header-search-form" action="#">
-          <input type="text" placeholder="search.." name="search" />
-          <button type="submit">Submit</button>
+        <!-- SEARCH FORM WITH RESULTS DROPDOWN -->
+        <form class="header-search-form" id="gameSearchForm" action="#">
+          <input type="text" placeholder="Search games..." name="search" id="gameSearchInput" />
+          <button type="submit">Search</button>
+          <div id="gameSearchResults"></div>
         </form>
+        <!-- Overlay for advanced filters -->
+        <div id="searchOverlay">
+          <div class="overlay-container">
+            <span class="close-btn" id="closeSearchOverlay">&times;</span>
+            <h2>Filter Games</h2>
+            <form id="overlaySearchForm" action="#">
+              <input type="text" placeholder="Search games..." id="overlaySearchInput" />
+              <fieldset>
+                <legend>Genre</legend>
+                <label><input type="checkbox" name="genre" value="Sports"> Sports</label>
+                <label><input type="checkbox" name="genre" value="Action"> Action</label>
+                <label><input type="checkbox" name="genre" value="Adventure"> Adventure</label>
+                <label><input type="checkbox" name="genre" value="Horror"> Horror</label>
+              </fieldset>
+              <fieldset>
+                <legend>Age Rating</legend>
+                <label><input type="checkbox" name="age" value="3+"> 3+</label>
+                <label><input type="checkbox" name="age" value="12+"> 12+</label>
+                <label><input type="checkbox" name="age" value="16+"> 16+</label>
+                <label><input type="checkbox" name="age" value="18+"> 18+</label>
+              </fieldset>
+              <fieldset>
+                <legend>Release Year</legend>
+                <label><input type="checkbox" name="year" value="2004"> 2004</label>
+                <label><input type="checkbox" name="year" value="2005"> 2005</label>
+                <label><input type="checkbox" name="year" value="2006"> 2006</label>
+                <label><input type="checkbox" name="year" value="2008"> 2008</label>
+                <label><input type="checkbox" name="year" value="2010"> 2010</label>
+                <label><input type="checkbox" name="year" value="2018"> 2018</label>
+                <label><input type="checkbox" name="year" value="2021"> 2021</label>
+              </fieldset>
+              <button type="submit">Apply Filters</button>
+            </form>
+          </div>
+        </div>
         <a id="cart-icon" class="header-cart" href="#">
           <div class="cart-icon-container">
             <img class="cart-img" src="/images/shoppingcart.png" alt="Shopping Cart" />
@@ -90,28 +126,25 @@
 
     <footer>
       <div class="social-media">
-              <a class="facebook-icon" href="https://www.facebook.com/"><img src="/images/facebook-logo.jpg" alt="Facebook icon" /></a>
-              <a class="github-icon" href="https://github.com/"><img src="/images/github-logo.jpg" alt="GitHub icon" /></a>
-              <a class="instagram-icon" href="https://www.instagram.com/"><img src="/images/instagram-logo.jpg" alt="Instagram icon" /></a>
-              <a class="twitter-icon" href="https://twitter.com/"><img src="/images/x-logo.jpg" alt="Twitter icon" /></a>
+        <a class="facebook-icon" href="https://www.facebook.com/"><img src="/images/facebook-logo.jpg" alt="Facebook icon" /></a>
+        <a class="github-icon" href="https://github.com/"><img src="/images/github-logo.jpg" alt="GitHub icon" /></a>
+        <a class="instagram-icon" href="https://www.instagram.com/"><img src="/images/instagram-logo.jpg" alt="Instagram icon" /></a>
+        <a class="twitter-icon" href="https://twitter.com/"><img src="/images/x-logo.jpg" alt="Twitter icon" /></a>
       </div>
-
       <div id="loggedOutButtons">
-          <button type="button" class="sign-up-button" onclick="window.location.href='/sign-up/sign-up.html'">Sign Up</button>
-          <button type="button" class="login-button" onclick="window.location.href='/login/login.html'">Log In</button>
+        <button type="button" class="sign-up-button" onclick="window.location.href='/sign-up/sign-up.html'">Sign Up</button>
+        <button type="button" class="login-button" onclick="window.location.href='/login/login.html'">Log In</button>
       </div>
-
-            <div id="loggedInButtons">
-              <button type="button" class="logout-button">Log Out</button>
-            </div>
-      </footer>
-      
-
+      <div id="loggedInButtons">
+        <button type="button" class="logout-button">Log Out</button>
+      </div>
+    </footer>
+  
     <div id="overlay-cart" class="overlay-cart">
       <div class="overlay-content">
         <h2>Your Cart</h2>
         <div class="listcart">
-
+          <!-- Cart items will be dynamically added here -->
         </div>
         <div class="btn">
           <button type="button" id="close-btn" class="close">×</button>

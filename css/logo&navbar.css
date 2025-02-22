@@ -30,6 +30,9 @@
 .earth-nobackground {
     width: 32px;
     height: 32px;
+    background-color: transparent;
+    box-shadow: 0 0 30px salmon;
+    border-radius: 50%;
 }
 
 /* Navigation Bar */
@@ -75,20 +78,22 @@
     transition: background-color 0.3s ease, transform 0.2s;
 }
 .custom-header .header-nav-links li a:hover {
-    background-color: var(--red-color);
+    background-color: salmon;
     color: var(--primary-color);
     transform: translateY(-2px);
 }
 
 .social-link {
     display: block;
+    border-radius: 50%;
+
 }
 
 .custom-header .header-cart {
     position: relative;
     width: 45px;
     height: 45px;
-    background-color: var(--blue-color);
+    background-color: salmon;
     border-radius: var(--button-border-radius10);
     overflow: hidden;
     transition: background-color 0.3s, transform 0.2s;
@@ -171,7 +176,7 @@
 }
 
 .custom-header:hover .header-cart:hover{
-    background-color: salmon;
+    background-color: rgb(91, 46, 255);
 }
 
 /* Responsive adjustments */

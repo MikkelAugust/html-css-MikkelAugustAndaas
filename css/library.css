@@ -3,7 +3,7 @@
 @import url('footer.css');
 @import url('cart.css');
 
-/* Reset default margins and paddings */
+/* Reset defaults */
 html, body {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ html, body {
 
 /* Overall dark theme */
 body {
-  background-color: #121212; /* very dark gray */
+  background-color: #121212;
   color: #e0e0e0;
   font-family: Arial, sans-serif;
   min-height: 100vh;
@@ -23,16 +23,20 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 0;
+  display: flex;
+  gap: 20px;
 }
 
 /* Library container wrapping text and grid */
 .library-image-container {
+  position: relative;
   background-color: #1e1e1e;
   border-radius: 20px;
   padding: 30px;
   margin: 20px auto;
   background: linear-gradient(90deg, #B961FF, #0a009d);
   box-shadow: 0 4px 50px var(--blue-color);
+  flex: 1;
 }
 
 /* Library text section */
@@ -64,11 +68,12 @@ main {
   margin: 10px 0;
 }
 
-/* Grid layout for game boxes */
+/* Game grid layout */
 .library-image-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
+  justify-content: center;
   width: 100%;
   padding: 0 20px;
 }
@@ -80,9 +85,10 @@ main {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  max-width: 350px;
+  margin: auto;
 }
 
-/* Hover effect for game boxes */
 .game-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
@@ -90,16 +96,66 @@ main {
   box-shadow: 0 4px 50px purple;
 }
 
-/* Styling for images within the game boxes */
-.library-image-placeholder {
+/* Image wrapper and image styling */
+.library-image-wrapper {
   width: 100%;
   height: 220px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.library-image-placeholder {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  display: block;
 }
 
 .library-image-placeholder:hover {
   transform: scale(1.05);
+}
+
+/* Sidebar styling */
+.library-sidebar {
+  position: sticky;
+  top: 40px;
+  width: 200px;
+  background: linear-gradient(180deg, #58009D, #B961FF);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  color: #fff;
+  height: fit-content;
+  margin-bottom: 20px;
+}
+
+.library-sidebar h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 10px;
+}
+
+.library-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.library-sidebar ul li {
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.library-sidebar ul li:hover,
+.library-sidebar ul li.active {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive adjustments */

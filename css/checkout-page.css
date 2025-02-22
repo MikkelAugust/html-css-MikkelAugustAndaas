@@ -48,53 +48,50 @@ nav a:hover {
 }
 
 /* Checkout Form */
-/* Checkout Container Styles */
 .checkout-container {
     max-width: 800px;
     margin: 80px auto 0;
     padding: 30px;
-    background-color: #1e1e1e; /* Dark background */
-    color: #f1f1f1;           /* Light text */
+    background-color: #1e1e1e;
+    color: #f1f1f1;
     border-radius: 15px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-  }
-  
-  /* Checkout Form Styles */
-  .checkout-form {
+}
+
+.checkout-form {
     margin-top: 20px;
     display: grid;
     gap: 20px;
-    background-color: #2c2c2c; /* Slightly lighter dark background */
+    background-color: #2c2c2c;
     padding: 20px;
     border-radius: 10px;
-  }
-  
-  .checkout-form fieldset {
+}
+
+.checkout-form fieldset {
     border: 1px solid #444;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 20px;
-  }
-  
-  .checkout-form legend {
+}
+
+.checkout-form legend {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 10px;
-    color: #ffcc00; /* Accent color */
-  }
-  
-  /* Labels and Inputs */
-  .checkout-item label {
+    color: #ffcc00;
+}
+
+.checkout-item label {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
     color: #f1f1f1;
-  }
-  
-  .checkout-item input,
-  .checkout-item select {
+}
+
+.checkout-item input,
+.checkout-item select {
     width: 100%;
     padding: 12px;
     margin-top: 5px;
@@ -103,16 +100,16 @@ nav a:hover {
     font-size: 16px;
     background-color: #3c3c3c;
     color: #fff;
-  }
-  
-  .checkout-item input:focus,
-  .checkout-item select:focus {
+}
+
+.checkout-item input:focus,
+.checkout-item select:focus {
     border-color: #ffcc00;
     outline: none;
-  }
-  
-  /* Checkout Button */
-  .checkout-btn {
+}
+
+/* Checkout Button */
+.checkout-btn {
     width: 100%;
     padding: 14px;
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
@@ -123,15 +120,15 @@ nav a:hover {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .checkout-btn:hover {
+}
+
+.checkout-btn:hover {
     background: linear-gradient(135deg, #feb47b, #ff7e5f);
     transform: translateY(-2px);
-  }
-  
-  /* Order Summary */
-  .order-summary {
+}
+
+/* Order Summary */
+.order-summary {
     margin-top: 40px;
     padding: 20px;
     background-color: #2c2c2c;
@@ -139,21 +136,21 @@ nav a:hover {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
     text-align: left;
     color: #f1f1f1;
-  }
-  
-  .order-summary h3 {
+}
+
+.order-summary h3 {
     font-size: 24px;
     margin-bottom: 15px;
     color: #ffcc00;
-  }
-  
-  .order-summary p {
+}
+
+.order-summary p {
     font-size: 20px;
     background-color: #3c3c3c;
     color: #ffffff;
     border-radius: 5px;
     padding: 5px;
-  }
+}
 
 @media (max-width: 600px) {
     .checkout-container {

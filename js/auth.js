@@ -36,4 +36,4 @@ function loginUser(email, password) {
   }
   
   // Make the login function globally available
-  window.loginUser = loginUser;  
+  window.loginUser = loginUser;

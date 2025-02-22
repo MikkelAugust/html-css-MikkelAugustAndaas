@@ -3,26 +3,24 @@
 @import url('footer.css');
 @import url('cart.css');
 
-/* Fade in animation */
 @keyframes fadeInOverlay {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
 #socialOverlay {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
   z-index: 3000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(10, 0, 50, 0.9); /* Dark overlay */
+  background-color: rgba(10, 0, 50, 0.9);
   overflow: auto;
   animation: fadeInOverlay 0.4s ease-out;
 }
 
-/* Inner container with gradient */
 #socialOverlay .social-overlay-inner {
   margin: 5% auto;
   width: 90%;
@@ -36,7 +34,6 @@
   overflow: hidden;
 }
 
-/* Header */
 .social-overlay-header {
   background-color: #1a1a2e;
   color: #fff;
@@ -83,7 +80,6 @@
   color: #ccc;
 }
 
-/* Navigation Tabs */
 .social-overlay-nav {
   display: flex;
   background: #1a1a2e;
@@ -96,6 +92,7 @@
   padding: 10px 15px;
   cursor: pointer;
   transition: background 0.3s;
+  font-family: 'Changa', sans-serif;
 }
 .social-tab:hover {
   background: rgba(255, 255, 255, 0.1);
@@ -105,7 +102,6 @@
   font-weight: bold;
 }
 
-/* Overlay Body */
 .social-overlay-body {
   flex: 1;
   padding: 20px;
@@ -114,29 +110,39 @@
   overflow-y: auto;
 }
 
-/* Social Content Sections */
 .social-content {
   display: none;
 }
+
 .social-content.active {
   display: block;
 }
 
-/* Form Styles for Profile Section */
+.social-content {
+  display: none;
+}
+
+.social-content.active {
+  display: block;
+}
+
 #profileForm {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 #profileForm label {
   font-weight: 600;
 }
+
 #profileForm input,
 #profileForm textarea {
   padding: 8px;
   border: none;
   border-radius: 4px;
 }
+
 #profileForm button {
   padding: 10px;
   background: #ff7e5f;
@@ -146,11 +152,11 @@
   cursor: pointer;
   transition: background 0.3s;
 }
+
 #profileForm button:hover {
   background: #feb47b;
 }
 
-/* Toast (if needed) remains unchanged */
 .toast {
   position: fixed;
   bottom: 20px;
@@ -164,7 +170,431 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
   z-index: 4000;
 }
+
 .toast.active {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
+}
+
+#profilePreview {
+  margin-top: 20px;
+  padding: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-family: 'Changa', sans-serif;
+  text-align: center;
+}
+
+#profilePreview h4 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#profileAvatarPreview {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffcc00;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+#profileAvatarPreview:hover {
+  transform: scale(1.1);
+}
+
+#profileBannerPreview {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+#profileBannerPreview:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+}
+
+#profileNameDisplay {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#profileBioDisplay,
+#profileCategoriesDisplay {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #ddd;
+}
+
+#categoryFieldset {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#categoryFieldset legend {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.category-label {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 8px;
+  background: #1a1a2e;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-label:hover {
+  background: #303030;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+#postCreation {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#postCreation textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #333;
+  color: #fff;
+  font-family: 'Changa', sans-serif;
+}
+#postCreation button {
+  align-self: flex-end;
+  padding: 8px 16px;
+  background: #ff7e5f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#postCreation button:hover {
+  background: #feb47b;
+}
+
+.post-item {
+  background: #1a1a2e;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+.post-item:hover {
+  transform: translateY(-3px);
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ffcc00;
+}
+.post-author {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.post-date {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+.post-body p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.post-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.post-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(10, 0, 50, 0.9);
+}
+
+/* ---------- Posts Section ---------- */
+#postCreation {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#postCreation textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #333;
+  color: #fff;
+  font-family: 'Changa', sans-serif;
+}
+#postCreation input[type="file"] {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 5px;
+  border-radius: 4px;
+}
+#postCreation button {
+  align-self: flex-end;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#postCreation button:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+}
+
+.post-item {
+  background: #1a1a2e;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 8px rgba(10, 0, 50, 0.7);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.post-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(10, 0, 50, 0.9);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ffcc00;
+}
+
+.post-author {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.post-body p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Style the media container within a post */
+.post-media {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* For both images and videos inside .post-media */
+/* Post Media Image Styling */
+.post-media img,
+.post-media video {
+  display: block;
+  max-width: 100%;
+  max-height: 300px; /* Limit the height */
+  margin: 10px auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(10, 0, 50, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-media img:hover,
+.post-media video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(10, 0, 50, 0.9);
+}
+
+/* Ellipsis Menu Styling */
+.post-menu {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.post-menu-options {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  background: #1a1a2e;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(10, 0, 50, 0.8);
+  z-index: 10;
+}
+
+.post-menu-options button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.post-menu-options button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Activity Section ---------- */
+#activityForm {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#activityForm label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+#activityForm textarea,
+#activityForm input[type="text"],
+#activityForm input[type="file"],
+#activityForm select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #333;
+  color: #fff;
+}
+
+#activityForm button {
+  padding: 10px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#activityForm button:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+}
+
+.activity-item {
+  background: #1a1a2e;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 8px rgba(10, 0, 50, 0.7);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.activity-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(10, 0, 50, 0.9);
+}
+.activity-date {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/* Trade image styling */
+.trade-image img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(10, 0, 50, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+.trade-image img:hover {
+  box-shadow: 0 8px 16px rgba(10, 0, 50, 0.9);
+}
+
+/* All Profiles Container */
+#allProfilesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+.profile-box {
+  background: #1a1a2e;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(10, 0, 50, 0.7);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(10, 0, 50, 0.9);
+}
+
+.profile-box img.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffcc00;
+}
+
+.profile-box h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.profile-box p.bio {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin: 0;
+}
+
+.profile-box p.categories {
+  font-size: 0.85rem;
+  color: #ffcc00;
+  margin: 0;
 }
