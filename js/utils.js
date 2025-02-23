@@ -1,5 +1,3 @@
-// utils.js
-
 /**
  * Redirects the user to the home page.
  */

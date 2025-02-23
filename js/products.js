@@ -1,6 +1,3 @@
-// /js/products.js
-
-// Function to implement fetch with retry logic
 function fetchWithRetry(url, options = {}, retries = 5, delay = 2000) {
   return fetch(url, options)
     .then(response => {
@@ -18,7 +15,6 @@ function fetchWithRetry(url, options = {}, retries = 5, delay = 2000) {
     });
 }
 
-// Function to fetch game data from the API using retry logic
 function fetchGameHubData() {
   const apiUrl = "https://v2.api.noroff.dev/gamehub";
   
@@ -27,16 +23,13 @@ function fetchGameHubData() {
     .then(games => {
       console.log("Fetched game data:", games);
       
-      // Cache the fetched data for faster subsequent loads.
       localStorage.setItem("gameHubData", JSON.stringify(games));
-      
-      // Filter for the three preview games: Space War, Forge Legend, and Cyberpunk
+
       const previewGames = games.filter(game =>
         ["Space War", "Forge Legend", "Cyberpunk"].includes(game.title)
       );
       console.log("Preview games:", previewGames);
-      
-      // If no preview games found, render all games for debugging
+
       if (previewGames.length === 0) {
         console.log("No preview games found. Rendering all available games:");
         games.forEach(game => console.log(game.title));
@@ -48,22 +41,18 @@ function fetchGameHubData() {
     });
 }
 
-// Function to render game previews in <main>
 function renderGamePreview(games) {
   const container = document.querySelector("main ul.image-container");
   if (!container) {
     console.error("Could not find the container for game images.");
     return;
   }
-  
-  // Clear the container's current contents
+
   container.innerHTML = "";
-  
-  // For each game, create a list item with a link and an image
+
   games.forEach(game => {
     const li = document.createElement("li");
-    
-    // Build the link that directs to the dynamic game page
+
     const link = document.createElement("a");
     link.href = `/game-page/game-page.html?id=${game.id}`;
     
@@ -78,20 +67,18 @@ function renderGamePreview(games) {
   });
 }
 
-// On DOMContentLoaded, try to render cached data first and then fetch fresh data.
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector("main ul.image-container");
   if (container) {
     container.innerHTML = `<li class="loading">Loading games...</li>`;
   }
   
-  // Check for cached data first
   const cachedData = localStorage.getItem("gameHubData");
   if (cachedData) {
     try {
       const games = JSON.parse(cachedData);
       console.log("Rendering cached game data.");
-      // Optionally, render only the preview games from cached data:
+
       const previewGames = games.filter(game =>
         ["Space War", "Forge Legend", "Cyberpunk"].includes(game.title)
       );
@@ -105,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   
-  // Always fetch fresh data (which will update the UI and cache)
   fetchGameHubData().catch(error => {
     console.error("Error fetching game data:", error);
     if (container) {

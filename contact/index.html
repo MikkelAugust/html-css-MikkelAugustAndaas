@@ -24,7 +24,6 @@
     <script src="/js/game-search.js" async></script>
     <script type="module" src="/js/socialOverlay.js"></script>
     <title>GameHub - Contact Us</title>
-    
 </head>
 
 <body>
@@ -50,13 +49,13 @@
           </a>
         </li>
       </ul>
-      <!-- SEARCH FORM WITH RESULTS DROPDOWN -->
+
       <form class="header-search-form" id="gameSearchForm" action="#">
         <input type="text" placeholder="Search games..." name="search" id="gameSearchInput" />
         <button type="submit">Search</button>
         <div id="gameSearchResults"></div>
       </form>
-      <!-- Overlay for advanced filters -->
+
       <div id="searchOverlay">
         <div class="overlay-container">
           <span class="close-btn" id="closeSearchOverlay">&times;</span>
@@ -153,42 +152,38 @@
             <a class="twitter-icon" href="https://twitter.com/"><img src="/images/x-logo.jpg" alt="Twitter icon" /></a>
     </div>
         <div class="social-media">
-        <!-- Social media links -->
+
         </div>
-        <!-- Container for logged-out state -->
+
         <div id="loggedOutButtons">
             <button type="button" class="sign-up-button" onclick="window.location.href='/sign-up/sign-up.html'">Sign Up</button>
             <button type="button" class="login-button" onclick="window.location.href='/login/login.html'">Log In</button>
         </div>
-          <!-- Container for logged-in state -->
+
           <div id="loggedInButtons">
             <button type="button" class="logout-button">Log Out</button>
           </div>
-    </footer>
-    
-        <!-- Overlay Cart (if needed) -->
-        <div id="overlay-cart" class="overlay-cart">
-          <div class="overlay-content">
-            <h2>Your Cart</h2>
-            <div class="listcart">
-              <!-- Cart items will be dynamically added here -->
-            </div>
-            <div class="btn">
-              <button type="button" id="close-btn" class="close">×</button>
-              <button type="button" class="checkout">CHECK OUT</button>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Socials Overlay -->
-        <div id="socialOverlay">
-          <div class="overlay-content">
-            <span class="close-overlay" id="closeSocialOverlay">&times;</span>
-            <h2>Social Hub</h2>
-            <!-- Insert your social page content here. This could be inlined HTML or an iframe, for example: -->
-            <p>Welcome to the Social Hub! Here you can see profiles, posts, and connect with other gamers.</p>
-            <!-- Optionally, load additional content dynamically -->
-          </div>
-        </div>
-      </body>
+</footer>
+
+  <div id="overlay-cart" class="overlay-cart">
+    <div class="overlay-content">
+      <h2>Your Cart</h2>
+      <div class="listcart">
+
+      </div>
+      <div class="btn">
+        <button type="button" id="close-btn" class="close">×</button>
+        <button type="button" class="checkout">CHECK OUT</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="socialOverlay">
+      <div class="overlay-content">
+      <span class="close-overlay" id="closeSocialOverlay">&times;</span>
+      <h2>Social Hub</h2>
+      <p>Welcome to the Social Hub! Here you can see profiles, posts, and connect with other gamers.</p>
+    </div>
+  </div>
+</body>
 </html>

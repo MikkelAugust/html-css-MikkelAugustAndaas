@@ -3,13 +3,11 @@
 @import url('footer.css');
 @import url('cart.css');
 
-/* Reset defaults */
 html, body {
   margin: 0;
   padding: 0;
 }
 
-/* Overall dark theme */
 body {
   background-color: #121212;
   color: #e0e0e0;
@@ -17,7 +15,6 @@ body {
   min-height: 100vh;
 }
 
-/* Main content container */
 main {
   width: 90%;
   max-width: 1200px;
@@ -27,7 +24,6 @@ main {
   gap: 20px;
 }
 
-/* Library container wrapping text and grid */
 .library-image-container {
   position: relative;
   background-color: #1e1e1e;
@@ -39,7 +35,6 @@ main {
   flex: 1;
 }
 
-/* Library text section */
 .game-text {
   background-color: #2a2a2a;
   border-radius: 15px;
@@ -68,7 +63,6 @@ main {
   margin: 10px 0;
 }
 
-/* Game grid layout */
 .library-image-grid {
   display: grid;
   gap: 20px;
@@ -78,7 +72,6 @@ main {
   padding: 0 20px;
 }
 
-/* Modern card style for each game box */
 .game-box {
   border-radius: 10px;
   overflow: hidden;
@@ -96,7 +89,6 @@ main {
   box-shadow: 0 4px 50px purple;
 }
 
-/* Image wrapper and image styling */
 .library-image-wrapper {
   width: 100%;
   height: 220px;
@@ -117,7 +109,6 @@ main {
   transform: scale(1.05);
 }
 
-/* Sidebar styling */
 .library-sidebar {
   position: sticky;
   top: 40px;
@@ -158,7 +149,6 @@ main {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Responsive adjustments */
 @media (min-width: 1100px) {
   .library-image-grid {
     grid-template-columns: repeat(3, 1fr);

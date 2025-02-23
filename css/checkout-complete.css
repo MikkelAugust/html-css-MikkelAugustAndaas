@@ -17,7 +17,6 @@ body {
     min-height: 100vh;
   }
   
-  /* Checkout Container */
   .checkout-container {
     padding: 40px 30px;
     background: #fff;
@@ -95,7 +94,6 @@ body {
     color: #555;
   }
   
-  /* Responsive adjustments */
   @media (max-width: 600px) {
     .checkout-container {
       width: 90%;
@@ -114,8 +112,7 @@ body {
       font-size: 1rem;
     }
   }
-  
-  /* Social Overlay Styles */
+
   #socialOverlay {
     display: none;
     position: fixed;
@@ -219,7 +216,6 @@ body {
     display: block;
   }
   
-  /* Cart Overlay Styles */
   #overlay-cart {
     display: none;
     position: fixed;

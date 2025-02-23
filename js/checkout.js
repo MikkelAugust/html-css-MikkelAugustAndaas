@@ -42,9 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     checkoutForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        // OBS Pop-Up: Inform user about responsibility
         if (!confirm("OBS! Every purchase is on your own responsibility. Do you agree?")) {
-            return; // Stop if user cancels
+            return;
         }
         const fullName = document.getElementById('shippingName').value.trim();
         const shippingAddress = document.getElementById('shippingAddress').value.trim();

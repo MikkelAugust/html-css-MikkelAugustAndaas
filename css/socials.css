@@ -57,5 +57,5 @@ body {
   }
 
   .social-link {
-    -webkit-tap-highlight-color: transparent; /* for mobile devices */
+    -webkit-tap-highlight-color: transparent;
   }

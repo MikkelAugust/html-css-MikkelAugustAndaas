@@ -62,7 +62,6 @@ footer {
     display: none;
   }
 
-  /* Remove the focus outline from the logout button */
   .logout-button:focus {
     outline: none;
   }
@@ -89,5 +88,4 @@ footer {
     margin-bottom: var(--common-margin-0);
     background-repeat: no-repeat;
    }
-    
 }

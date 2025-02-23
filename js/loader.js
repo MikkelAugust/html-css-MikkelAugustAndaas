@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // If you want to disable the loader, set window.disableLoader = true before this script runs.
   if (typeof window.disableLoader !== "undefined" && window.disableLoader === true) {
     return;
   }
 
-  // Create the full-screen loading overlay
   const loadingOverlay = document.createElement("div");
   loadingOverlay.id = "loading-overlay";
-  // Create a retro, pixelated spinner inside the overlay.
   loadingOverlay.innerHTML = `
     <div id="loader">
       <div class="pixel"></div>
@@ -18,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   document.body.appendChild(loadingOverlay);
 
-  // Create and append a <style> tag with our CSS
   const style = document.createElement("style");
   style.textContent = `
     /* Full-screen overlay styling */
@@ -83,11 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   document.head.appendChild(style);
 
-  // Remove the loader when the page is fully loaded
   window.addEventListener("load", () => {
-    // Start fade out animation
     loadingOverlay.style.animation = "fadeOut 0.3s ease-out forwards";
-    // Remove the overlay from the DOM after animation completes
     setTimeout(() => {
       if (loadingOverlay.parentNode) {
         loadingOverlay.parentNode.removeChild(loadingOverlay);

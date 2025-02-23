@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Updated CSP to allow connections to the Noroff API -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://v2.api.noroff.dev; img-src 'self' data: https://static.noroff.dev;">
     <meta name="description" content="Enter ForgeLegend, a sci-fi magical adventure! Uncover mystical realms, wield powerful spells, and face formidable foes." />
     <link rel="stylesheet" href="/css/gamepage.css" />
@@ -51,13 +50,11 @@
           </a>
         </li>
       </ul>
-      <!-- SEARCH FORM WITH RESULTS DROPDOWN -->
       <form class="header-search-form" id="gameSearchForm" action="#">
         <input type="text" placeholder="Search games..." name="search" id="gameSearchInput" />
         <button type="submit">Search</button>
         <div id="gameSearchResults"></div>
       </form>
-      <!-- Overlay for advanced filters -->
       <div id="searchOverlay">
         <div class="overlay-container">
           <span class="close-btn" id="closeSearchOverlay">&times;</span>
@@ -120,7 +117,6 @@
 
             </ul>
           </section>
-          <!-- Order Button -->
           <a class="ordernow">
             <button type="button" class="button1">Add to cart</button>
           </a>
@@ -148,7 +144,6 @@
       <div class="overlay-content">
         <h2>Your Cart</h2>
         <div class="listcart">
-          <!-- Cart items will be dynamically added here -->
         </div>
         <div class="btn">
           <button type="button" id="close-btn" class="close">×</button>

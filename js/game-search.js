@@ -1,4 +1,3 @@
-// game-search.js
 document.addEventListener("DOMContentLoaded", () => {
     const searchForm = document.getElementById("gameSearchForm");
     const searchInput = document.getElementById("gameSearchInput");
@@ -11,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Search results container (#gameSearchResults) not found in the HTML.");
     }
   
-    // Function to get game data (from localStorage or via API fetch)
     function getGameData() {
       const cachedData = localStorage.getItem("gameHubData");
       if (cachedData) {
@@ -38,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
   
-    // Function to filter games based on search query and selected filters
     function filterGames(games) {
       const query = searchInput.value.trim().toLowerCase();
       const selectedGenres = Array.from(filterGenreCheckboxes)
@@ -63,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   
-    // Function to render games into the search results container (dropdown style)
     function renderSearchResults(games) {
       if (!searchResultsContainer) return;
       searchResultsContainer.innerHTML = "";
@@ -87,19 +83,16 @@ document.addEventListener("DOMContentLoaded", () => {
           searchResultsContainer.appendChild(resultDiv);
         });
       }
-      // Ensure the results container is visible
       searchResultsContainer.style.display = "block";
     }
-  
-    // Listen for input events so suggestions appear immediately as you type
+
     searchInput.addEventListener("input", () => {
       getGameData().then(games => {
         const filtered = filterGames(games);
         renderSearchResults(filtered);
       });
     });
-  
-    // Also show suggestions when the search input is focused (if text exists)
+
     searchInput.addEventListener("focus", () => {
       if (searchInput.value.trim() !== "") {
         getGameData().then(games => {
@@ -109,27 +102,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   
-    // When the search form is submitted:
-    // - If no results, do nothing.
-    // - If results exist, choose the top result and redirect.
     searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
       getGameData().then(games => {
-        const filtered = filterGames(games);
-        if (filtered.length === 0) {
+      const filtered = filterGames(games);
+      if (filtered.length === 0) {
           console.log("No results found; not redirecting.");
           return;
-        } else {
+      } else {
           const topPick = filtered[0];
           window.location.href = `/game-page/game-page.html?id=${topPick.id}`;
-        }
-      });
-    });
+    }
+  });
+});
   
-    // Hide search results when clicking outside the search form and results container
-    document.addEventListener("click", (e) => {
-      if (!searchForm.contains(e.target) && !searchResultsContainer.contains(e.target)) {
-        searchResultsContainer.style.display = "none";
+document.addEventListener("click", (e) => {
+  if (!searchForm.contains(e.target) && !searchResultsContainer.contains(e.target)) {
+      searchResultsContainer.style.display = "none";
       }
-    });
-  });  
+  });
+});  

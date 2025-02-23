@@ -3,7 +3,6 @@
 @import url('footer.css');
 @import url('cart.css');
 
-/* Global Styles */
 body {
   font-family: 'Changa', sans-serif;
   background-image: url("/images/background.webp");
@@ -16,9 +15,8 @@ body {
   min-height: 90vh;
 }
 
-/* Header */
 header {
-  margin-bottom: 170px; /* Reduced from 150px to bring content up */
+  margin-bottom: 170px;
 }
 
 header h1 {
@@ -51,9 +49,8 @@ header .shopping .quantity {
   align-items: center;
 }
 
-/* Main Content */
 main {
-  margin-top: 50px; /* Reduced margin-top */
+  margin-top: 50px;
   justify-content: center;
   position: sticky;
   display: flex;
@@ -61,7 +58,6 @@ main {
   list-style: none;
 }
 
-/* Image Container */
 .image-container {
   display: flex;
   flex-wrap: wrap;
@@ -73,7 +69,6 @@ li {
   list-style: none;
 }
 
-/* Explore Button */
 .explore {
   position: sticky;
   color: var(--primary-color);
@@ -86,7 +81,7 @@ li {
   margin: 20px;
   margin-left: var(--standard-margin-px300);
   margin-right: var(--standard-margin-px300);
-  margin-bottom: 80px; /* Reduced from 100px */
+  margin-bottom: 80px;
 }
 
 .explore a {
@@ -99,13 +94,11 @@ li {
   cursor: pointer;
 }
 
-/* Image Placeholder Hover */
 .image-placeholder-container:hover {
   box-shadow: 0 4px 50px rgb(95, 76, 202);
   cursor: pointer;
 }
 
-/* Container */
 .container {
   max-width: 1200px;
   margin: 20px auto;
@@ -115,7 +108,6 @@ li {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Product Card */
 .product-card {
   background: rgba(20, 20, 20, 0.85);
   border: 2px solid #ff4500;
@@ -169,7 +161,6 @@ li {
   background: linear-gradient(45deg, #ff8c00, #ff4500);
 }
 
-/* Responsive Adjustments */
 @media (max-width: 700px) {
   .explore {
     width: 90%;

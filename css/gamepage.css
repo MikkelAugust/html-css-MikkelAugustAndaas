@@ -29,7 +29,6 @@ main {
   flex: 1;
 }
 
-/* Container to align game cover and information side-by-side */
 .image-container {
   display: flex;
   flex-wrap: wrap;
@@ -41,7 +40,6 @@ main {
   margin: 0 auto;
 }
 
-/* Game Cover Column */
 .game-cover-container {
   flex: 1 1 300px;
   display: flex;
@@ -62,7 +60,6 @@ main {
   transform: scale(1.05);
 }
 
-/* Game Information Column */
 .game-info {
   flex: 1 1 300px;
   display: flex;
@@ -71,14 +68,12 @@ main {
   gap: 1.5rem;
 }
 
-/* Game Title */
 .gametitle {
   font-size: 2rem;
   margin: 0;
   color: white;
 }
 
-/* Game Description Text */
 .gametext {
   background-color: rgba(46, 6, 138, 0.85);
   color: white;
@@ -90,7 +85,6 @@ main {
   margin: 0;
 }
 
-/* Game Details Section */
 .game-details ul {
   list-style: none;
   padding: 0;
@@ -103,7 +97,6 @@ main {
   margin-bottom: 0.5rem;
 }
 
-/* Price and Order Button Container */
 .price,
 .ordernow {
   flex-basis: 100%;
@@ -120,7 +113,6 @@ main {
   display: inline-block;
 }
 
-/* Order Now Button */
 .button1 {
   color: white;
   font-size: 1rem;
@@ -152,7 +144,6 @@ main {
   transform: scale(1.05);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .image-container {
     flex-direction: column;

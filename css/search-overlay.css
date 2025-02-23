@@ -3,7 +3,6 @@
 @import url('footer.css');
 @import url('cart.css');
 
-/* Basic styling for the search form in the navbar */
 .header-search-form {
     display: block;
     position: relative;
@@ -15,7 +14,6 @@
     font-size: 1rem;
   }
   
-  /* Styles for a full-screen overlay for search filters */
   #searchOverlay {
     position: fixed;
     top: 0;
@@ -93,10 +91,9 @@
     cursor: pointer;
 }
 
-/* Container for search results */
 #gameSearchResults {
     position: absolute;
-    top: 100%; /* Immediately below the search form */
+    top: 100%;
     left: 0;
     width: 100%;
     background: #fff;
@@ -104,11 +101,10 @@
     z-index: 9999;
     max-height: 300px;
     overflow-y: auto;
-    display: none; /* Hidden by default */
+    display: none;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
   
-  /* Individual result item styling */
   .search-result {
     padding: 10px;
     border-bottom: 1px solid #eee;
@@ -154,4 +150,4 @@
   
   .result-info a:hover {
     text-decoration: underline;
-  }  
+  }

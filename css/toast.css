@@ -1,6 +1,5 @@
-/* toast.css */
+@import url('variables.css');
 
-/* Position the container in the bottom left */
 .toast-container {
   position: fixed;
   bottom: 20px;
@@ -11,9 +10,8 @@
   align-items: flex-start;
 }
 
-/* Base styles for the toast messages */
 .toast-message {
-  background-color: #2196F3; /* Default blue for info */
+  background-color: #2196F3;
   color: white;
   padding: 10px 15px;
   border-radius: 4px;
@@ -26,13 +24,11 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* When the toast is shown, slide in and fade in */
 .toast-message.show {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* Color schemes for different toast types */
 .toast-message.success {
   background-color: rgb(59, 10, 173);
 }

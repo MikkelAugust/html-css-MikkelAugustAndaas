@@ -2,14 +2,12 @@ import { fetchGameData } from '/js/api.js';
 
 let allGames = [];
 
-// Function to dynamically generate the sidebar
 function renderSidebar() {
   const sidebarContainer = document.getElementById("sidebarContainer");
   if (!sidebarContainer) return;
   const sidebar = document.createElement("aside");
   sidebar.classList.add("library-sidebar");
 
-  // Define the categories in an array (you could also fetch these dynamically)
   const categories = ["all", "sports", "action", "adventure", "horror"];
   let html = `<h2>Categories</h2><ul>`;
   categories.forEach(category => {
@@ -19,7 +17,6 @@ function renderSidebar() {
   sidebar.innerHTML = html;
   sidebarContainer.appendChild(sidebar);
 
-  // Attach event listeners for filtering
   const sidebarItems = sidebar.querySelectorAll("ul li");
   sidebarItems.forEach(item => {
     item.addEventListener("click", () => {
@@ -28,7 +25,6 @@ function renderSidebar() {
       const category = item.getAttribute("data-category");
       filterLibraryGames(category);
       
-      // Trigger a toast notification when a category is selected
       if (window.showToast) {
         showToast(`Showing ${category.charAt(0).toUpperCase() + category.slice(1)} games.`, "info", 2000);
       }
@@ -53,8 +49,7 @@ function renderLibraryGames(games) {
     
     const link = document.createElement('a');
     link.href = `/game-page/game-page.html?id=${game.id}`;
-    
-    // Image wrapper for consistent sizing
+
     const wrapper = document.createElement('div');
     wrapper.classList.add('library-image-wrapper');
     
@@ -91,7 +86,6 @@ function filterLibraryGames(category) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Render sidebar dynamically
   renderSidebar();
 
   fetchGameData()
@@ -99,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
       allGames = games;
       renderLibraryGames(allGames);
       
-      // Optionally, notify users that the library has loaded
       if (window.showToast) {
         showToast("Game library loaded successfully.", "success", 2000);
       }

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Create the overlay element dynamically
+
   const socialOverlay = document.createElement("div");
   socialOverlay.id = "socialOverlay";
   socialOverlay.innerHTML = `
@@ -110,8 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   document.body.appendChild(socialOverlay);
   socialOverlay.style.display = "none";
-  
-  // Open/close overlay logic with login check
+
   const openBtn = document.getElementById("openSocialOverlay");
   const closeBtn = document.getElementById("closeSocialOverlay");
   if (openBtn) {
@@ -138,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   
-  // Tab switching logic
   const tabs = socialOverlay.querySelectorAll(".social-tab");
   const contents = socialOverlay.querySelectorAll(".social-content");
   tabs.forEach(tab => {
@@ -158,11 +156,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-  // Use logged-in user's email to build a unique key for their profile
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   const profileKey = loggedInUser ? "socialProfile_" + loggedInUser.email : "socialProfile";
-  
-  // PROFILE FORM & PREVIEW
+
   const profileForm = document.getElementById("profileForm");
   if (profileForm) {
     profileForm.addEventListener("submit", e => {
@@ -243,8 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
         : "";
     }
   }
-  
-  // POSTS FUNCTIONALITY WITH COMMENTING
+
   function loadPosts() {
     return JSON.parse(localStorage.getItem("socialPosts")) || [];
   }
@@ -408,8 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   renderPosts();
-  
-  // ACTIVITY FUNCTIONALITY
+
   const activityTypeSelect = document.getElementById("activityType");
   const activityPostFields = document.getElementById("activityPostFields");
   const activityTradeFields = document.getElementById("activityTradeFields");
@@ -534,7 +528,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   renderActivity();
   
-  // SEARCH FUNCTIONALITY
   const searchBtn = document.getElementById("socialSearchBtn");
   if (searchBtn) {
     searchBtn.addEventListener("click", () => {
@@ -616,7 +609,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   
-  // RENDER ALL PROFILES
+
   function renderAllProfiles() {
     const container = document.getElementById("allProfilesContainer");
     if (!container) return;

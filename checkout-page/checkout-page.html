@@ -51,13 +51,13 @@
           </a>
         </li>
       </ul>
-      <!-- SEARCH FORM WITH RESULTS DROPDOWN -->
+
       <form class="header-search-form" id="gameSearchForm" action="#">
         <input type="text" placeholder="Search games..." name="search" id="gameSearchInput" />
         <button type="submit">Search</button>
         <div id="gameSearchResults"></div>
       </form>
-      <!-- Overlay for advanced filters -->
+
       <div id="searchOverlay">
         <div class="overlay-container">
           <span class="close-btn" id="closeSearchOverlay">&times;</span>
@@ -99,9 +99,9 @@
         </div>
       </a>
     </nav>
-  </header>
+</header>
 
-  <main>
+<main>
     <section class="checkout-container" aria-labelledby="checkoutTitle">
       <h2 id="checkoutTitle">Checkout</h2>
       <form id="checkoutForm" class="checkout-form" aria-describedby="orderSummary">
@@ -116,7 +116,7 @@
             <input type="text" id="shippingAddress" name="shippingAddress" required />
           </div>
         </fieldset>
-        <fieldset>
+      <fieldset>
           <legend>Payment Information</legend>
           <div class="checkout-item">
             <label for="paymentMethod">Payment Method</label>
@@ -126,22 +126,24 @@
               <option value="applepay">Apple Pay</option>
             </select>
           </div>
-          <!-- Card information (only required for Credit Card payments) -->
-          <div id="creditCardInfo">
-            <div class="checkout-item">
-              <label for="cardNumber">Card Number</label>
-              <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9\s]{13,19}" placeholder="xxxx xxxx xxxx xxxx" required />
-            </div>
-            <div class="checkout-item">
-              <label for="cardHolder">Cardholder Name</label>
-              <input type="text" id="cardHolder" name="cardHolder" required />
-            </div>
-            <div class="checkout-item">
-              <label for="expiryDate">Expiration Date</label>
-              <input type="month" id="expiryDate" name="expiryDate" required />
-            </div>
-            <div class="checkout-item">
-              <label for="cvv">CVV</label>
+
+  <div id="creditCardInfo">
+      <div class="checkout-item">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9\s]{13,19}" placeholder="xxxx xxxx xxxx xxxx" required />
+      </div>
+      <div class="checkout-item">
+        <label for="cardHolder">Cardholder Name</label>
+        <input type="text" id="cardHolder" name="cardHolder" required />
+        </div>
+
+        <div class="checkout-item">
+        <label for="expiryDate">Expiration Date</label>
+        <input type="month" id="expiryDate" name="expiryDate" required />
+        </div>
+
+        <div class="checkout-item">
+          <label for="cvv">CVV</label>
               <input type="text" id="cvv" name="cvv" pattern="[0-9]{3,4}" placeholder="123" required />
             </div>
           </div>
@@ -156,10 +158,9 @@
         <p><strong>Total:</strong> $<span id="totalPrice"></span></p>
       </div>
     </section>
-  </main>
+</main>
 
-  <!-- Footer -->
-  <footer>
+<footer>
     <div class="social-media">
       <a class="facebook-icon" href="https://www.facebook.com/">
         <img src="/images/facebook-logo.jpg" alt="Facebook Icon" />
@@ -181,23 +182,23 @@
     <div id="loggedInButtons">
       <button type="button" class="logout-button">Log Out</button>
     </div>
-  </footer>
+</footer>
 
-  <!-- Overlay Cart (required for cart functionality) -->
-  <div id="overlay-cart" class="overlay-cart">
+
+<div id="overlay-cart" class="overlay-cart">
     <div class="overlay-content">
       <h2>Your Cart</h2>
       <div class="listcart">
-        <!-- Cart items will be dynamically added here -->
+
       </div>
       <div class="btn">
         <button type="button" id="close-btn" class="close">×</button>
         <button type="button" class="checkout">CHECK OUT</button>
       </div>
     </div>
-  </div>
+</div>
 
-  <!-- Social Overlay -->
+
   <div id="socialOverlay" class="social-overlay" role="dialog" aria-modal="true">
     <div class="social-overlay-inner">
       <div class="social-overlay-header">

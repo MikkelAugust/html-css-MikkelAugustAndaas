@@ -21,19 +21,15 @@ function loginUser(email, password) {
       })
       .then(result => {
         console.log("Login result:", result);
-        // The API returns the user profile in result.data
         const user = result.data;
-        // Save user data in localStorage for later use
         localStorage.setItem("loggedInUser", JSON.stringify(user));
-        // Optionally, update your UI or redirect the user:
         alert("Login successful!");
         window.location.href = "/index.html";
-      })
-      .catch(error => {
-        console.error("Login error:", error);
-        alert("Login failed. Please check your email and password.");
-      });
-  }
+    })
+    .catch(error => {
+      console.error("Login error:", error);
+      alert("Login failed. Please check your email and password.");
+    });
+}
   
-  // Make the login function globally available
-  window.loginUser = loginUser;
+window.loginUser = loginUser;

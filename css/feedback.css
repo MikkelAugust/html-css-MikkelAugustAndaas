@@ -3,7 +3,6 @@
 @import url('footer.css');
 @import url('cart.css');
 
-/* Global Styles */
 body {
   background: var(--background-linear-color);
   background-repeat: no-repeat;
@@ -19,14 +18,12 @@ body {
   font-size: 1.45rem;
 }
 
-/* Header (minimal styling) */
 header {
   width: 100%;
   margin-bottom: 100px;
   text-align: center;
 }
 
-/* Main Container */
 main {
   display: flex;
   justify-content: center;
@@ -38,7 +35,6 @@ main {
   position: relative;
 }
 
-/* Feedback Box */
 .box {
   background-color: var(--primary-color);
   color: var(--secoundary-color);
@@ -54,7 +50,6 @@ main {
   animation: popIn 0.7s ease-out forwards;
 }
 
-/* Pop In Animation */
 @keyframes popIn {
   0% {
     opacity: 0;
@@ -70,14 +65,12 @@ main {
   }
 }
 
-/* V-icon Styling (centered) */
 .v-icon {
   display: block;
   width: 100px;
   margin: 0 auto 20px auto;
 }
 
-/* Paragraph styles */
 .paragraph,
 .paragraph1 {
   margin: 5px 0;
@@ -86,7 +79,6 @@ main {
   color: var(--secoundary-color);
 }
 
-/* Footer Styles */
 footer {
   width: 100%;
   margin-top: 50px;
@@ -94,7 +86,7 @@ footer {
   padding: 20px 0;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 800px) {
   body {
     font-size: 1.1rem;
