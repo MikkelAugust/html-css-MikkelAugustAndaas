@@ -27,6 +27,11 @@ function renderSidebar() {
       item.classList.add("active");
       const category = item.getAttribute("data-category");
       filterLibraryGames(category);
+      
+      // Trigger a toast notification when a category is selected
+      if (window.showToast) {
+        showToast(`Showing ${category.charAt(0).toUpperCase() + category.slice(1)} games.`, "info", 2000);
+      }
     });
   });
 }
@@ -35,6 +40,9 @@ function renderLibraryGames(games) {
   const container = document.querySelector('.library-image-grid');
   if (!container) {
     console.error("Could not find '.library-image-grid' container.");
+    if (window.showToast) {
+      showToast("Error: Could not load game grid.", "error");
+    }
     return;
   }
   container.innerHTML = "";
@@ -90,6 +98,16 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(games => {
       allGames = games;
       renderLibraryGames(allGames);
+      
+      // Optionally, notify users that the library has loaded
+      if (window.showToast) {
+        showToast("Game library loaded successfully.", "success", 2000);
+      }
     })
-    .catch(err => console.error("Error fetching library games:", err));
+    .catch(err => {
+      console.error("Error fetching library games:", err);
+      if (window.showToast) {
+        showToast("Error fetching library games. Please try again later.", "error");
+      }
+    });
 });

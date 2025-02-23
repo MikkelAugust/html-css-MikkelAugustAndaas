@@ -8,4 +8,4 @@ export function fetchGameData() {
         return response.json();
       })
       .then(result => result.data || result);
-  }  
+}

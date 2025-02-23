@@ -1,0 +1,46 @@
+/* toast.css */
+
+/* Position the container in the bottom left */
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Base styles for the toast messages */
+.toast-message {
+  background-color: #2196F3; /* Default blue for info */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-top: 10px;
+  min-width: 200px;
+  max-width: 300px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* When the toast is shown, slide in and fade in */
+.toast-message.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Color schemes for different toast types */
+.toast-message.success {
+  background-color: rgb(59, 10, 173);
+}
+
+.toast-message.error {
+  background-color: #f44336;
+}
+
+.toast-message.warning {
+  background-color: #ff9800;
+}
