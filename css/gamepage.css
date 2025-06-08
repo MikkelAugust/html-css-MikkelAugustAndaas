@@ -1,11 +1,9 @@
 @import url('variables.css');
-@import url('logo&navbar.css');
-@import url('footer.css');
-@import url('cart.css');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 body {
-  font-family: 'Changa', sans-serif;
-  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+  font-family: 'Rubik', sans-serif;
+  background-image: linear-gradient(to bottom, rgba(200, 200, 200, 0.1), rgba(20, 20, 20, 1));
   margin: 0;
   background-size: cover;
   background-position: center;
@@ -58,6 +56,7 @@ main {
 
 .gamecover:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(185, 97, 255, 0.6);
 }
 
 .game-info {
@@ -71,11 +70,11 @@ main {
 .gametitle {
   font-size: 2rem;
   margin: 0;
-  color: white;
+  color: rgb(9, 44, 96);
 }
 
 .gametext {
-  background-color: rgba(46, 6, 138, 0.85);
+  background: linear-gradient(135deg, #58009D, #B961FF);
   color: white;
   font-size: 1.1rem;
   padding: 2rem;
@@ -91,10 +90,17 @@ main {
   margin: 0;
   color: white;
   font-size: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .game-details li {
   margin-bottom: 0.5rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .price,
@@ -105,7 +111,7 @@ main {
 }
 
 .price {
-  background-color: green;
+  background: linear-gradient(135deg, #58ff70, #00cc44);
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -118,7 +124,7 @@ main {
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  background: linear-gradient(135deg, #B961FF, #58009D);
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
@@ -140,7 +146,7 @@ main {
 }
 
 .button1:hover {
-  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  background: linear-gradient(135deg, #58009D, #B961FF);
   transform: scale(1.05);
 }
 
@@ -170,5 +176,12 @@ main {
   .button1 {
     font-size: 0.9rem;
     padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-details ul {
+    padding: 1rem;
+    font-size: 0.9rem;
   }
 }

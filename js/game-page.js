@@ -86,3 +86,20 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => window.location.reload(), 3000);
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const signUpBtn = document.querySelector(".sign-up-button");
+  const loginBtn = document.querySelector(".login-button");
+
+  if (signUpBtn) {
+    signUpBtn.addEventListener("click", () => {
+      window.location.assign("/sign-up/sign-up.html");
+    });
+  }
+
+  if (loginBtn) {
+    loginBtn.addEventListener("click", () => {
+      window.location.assign("/login/login.html");
+    });
+  }
+});

@@ -46,3 +46,7 @@
     background-color: var(--red-color);
     transform: translateY(-10px);
 }
+
+li {
+  list-style: none;
+}

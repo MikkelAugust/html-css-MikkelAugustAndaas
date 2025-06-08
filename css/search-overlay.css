@@ -1,7 +1,4 @@
 @import url('variables.css');
-@import url('logo&navbar.css');
-@import url('footer.css');
-@import url('cart.css');
 
 .header-search-form {
     display: block;

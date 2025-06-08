@@ -1,5 +1,3 @@
-// /js/auth.js
-
 /**
  * Login a user using the Noroff API.
  * @param {string} email - The user's email (should end with @stud.noroff.no).

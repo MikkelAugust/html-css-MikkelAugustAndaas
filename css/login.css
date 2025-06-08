@@ -1,21 +1,27 @@
 @import url('variables.css');
-@import url('logo&navbar.css');
-@import url('footer.css');
-@import url('cart.css');
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+
+
 
 body {
-    font-family: 'Changa', sans-serif;
-    background: linear-gradient(to bottom right, #0A2E8C, #800080);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: var(--common-min-height);
+  background: linear-gradient(to bottom right, #0A2E8C, #800080);
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  width: 100%;
 }
 
-header {
-    margin-bottom: 150px;
+.login-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+header{
+    height: 80px;
 }
 
 .container {

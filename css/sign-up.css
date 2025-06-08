@@ -1,21 +1,25 @@
 @import url('variables.css');
-@import url('logo&navbar.css');
-@import url('footer.css');
-@import url('cart.css');
+
 
 body {
-    font-family: 'Changa', sans-serif;
-    background: linear-gradient(to bottom right, #0A2E8C, #800080);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: var(--common-min-height);
+  font-family: 'Changa', sans-serif;
+  background: linear-gradient(to bottom right, #0A2E8C, #800080);
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
-header {
-    margin-bottom: 150px;
+.sign-up-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+header{
+    height: 80px;
 }
 
 .container {

@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta
-      name="description"
-      content="Sign in to your account and access exclusive features. Log in securely with your username and password. New here? Create an account to get started!"
-    />
+    <link rel="stylesheet" href="/css/variables.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Changa&display=swap" rel="stylesheet" />
+    <meta name="description" content="Sign in to your account and access exclusive features. Log in securely with your username and password. New here? Create an account to get started!"/>
     <link rel="stylesheet" href="/css/login.css"/>
     <link rel="stylesheet" href="/css/logo&navbar.css"/>
-    <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/cart.css" />
-    <link rel="stylesheet" href="/css/search-overlay.css" />
+    <link rel="stylesheet" href="/css/footer.css"/>
+    <link rel="stylesheet" href="/css/cart.css"/>
+    <link rel="stylesheet" href="/css/search-overlay.css"/>
     <link rel="stylesheet" href="/css/socials-overlay.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="icon" href="/images/head.png" />
@@ -21,14 +22,14 @@
     <script src="/js/utils.js" async></script>
     <script src="/js/loader.js" async></script>
     <script src="/js/script.js" async></script>
-    <script src="/js/products.js" async></script>
-    <script src="/js/game-page.js" async></script>
     <script src="/js/game-search.js" async></script>
     <script type="module" src="/js/socialOverlay.js"></script>
     <title>GameHub Log In</title>
+  </head>
 
 <body>
-  <header class="custom-header">
+  
+   <header class="custom-header">
     <section class="header-content">
       <a href="/index.html">
         <img class="header-logo" src="/images/gamehub_logo.png" alt="GameHub Logo" />
@@ -50,13 +51,11 @@
           </a>
         </li>
       </ul>
-
       <form class="header-search-form" id="gameSearchForm" action="#">
         <input type="text" placeholder="Search games..." name="search" id="gameSearchInput" />
         <button type="submit">Search</button>
         <div id="gameSearchResults"></div>
       </form>
-
       <div id="searchOverlay">
         <div class="overlay-container">
           <span class="close-btn" id="closeSearchOverlay">&times;</span>
@@ -100,6 +99,7 @@
     </nav>
   </header>
 
+  <main class="login-main">
     <div class="container">
       <img src="/images/gamehub_logo.png" alt="GameHub Logo" class="gamehub-logo" />
       <form id="loginForm">
@@ -110,6 +110,7 @@
         <button type="submit">Log In</button>
       </form>      
     </div>
+    </main>
       
     <footer>
       <div class="social-media">

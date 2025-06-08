@@ -1,6 +1,3 @@
-/**
- * Redirects the user to the home page.
- */
 function redirectHome() {
     window.location.href = '/index.html';
   }

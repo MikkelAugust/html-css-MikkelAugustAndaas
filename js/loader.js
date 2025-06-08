@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const style = document.createElement("style");
   style.textContent = `
-    /* Full-screen overlay styling */
+
     #loading-overlay {
       position: fixed;
       top: 0;
@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
       animation: fadeIn 0.3s ease-out forwards;
     }
 
-    /* Retro pixel spinner container */
     #loader {
       width: 64px;
       height: 64px;
@@ -41,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       animation: spin 0.8s linear infinite;
     }
 
-    /* Four pixels positioned in a square layout */
+ 
     #loader .pixel {
       position: absolute;
       width: 12px;
@@ -55,19 +54,19 @@ document.addEventListener("DOMContentLoaded", () => {
     #loader .pixel:nth-child(3) { bottom: 0; left: 0; }
     #loader .pixel:nth-child(4) { bottom: 0; right: 0; }
 
-    /* Spinner rotation */
+  
     @keyframes spin {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
 
-    /* Pixel flicker for a dynamic retro feel */
+  
     @keyframes pixel-flicker {
       0% { opacity: 0.5; }
       100% { opacity: 1; }
     }
 
-    /* Fade in/out animations for the overlay */
+  
     @keyframes fadeIn {
       from { opacity: 0; transform: scale(0.95); }
       to { opacity: 1; transform: scale(1); }

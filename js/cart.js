@@ -71,34 +71,31 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addToCart = addToCart;
   
   function attachQuantityListeners() {
-      document.querySelectorAll('.quantity-btn.plus').forEach(button => {
-        button.addEventListener('click', function () {
-          const gameId = this.getAttribute('data-id');
-          const game = cartItems.find(item => item.id === gameId);
-          if (game) {
-            game.quantity++;
-            localStorage.setItem('cart', JSON.stringify(cartItems));
-            updateCartUI();
-            attachQuantityListeners();
+    if (!cartItemsContainer) return;
+
+    cartItemsContainer.addEventListener('click', function (event) {
+      const target = event.target;
+      if (target.classList.contains('quantity-btn')) {
+        const gameId = target.getAttribute('data-id');
+        const game = cartItems.find(item => item.id === gameId);
+
+        if (!game) return;
+
+        if (target.classList.contains('plus')) {
+          game.quantity++;
+        } else if (target.classList.contains('minus')) {
+          if (game.quantity > 1) {
+            game.quantity--;
+          } else {
+            cartItems = cartItems.filter(item => item.id !== gameId);
           }
-        });
-      });
-  
-  document.querySelectorAll('.quantity-btn.minus').forEach(button => {
-    button.addEventListener('click', function () {
-    const gameId = this.getAttribute('data-id');
-    const game = cartItems.find(item => item.id === gameId);
-    if (game && game.quantity > 1) {
-          game.quantity--;
-      } else {
-          cartItems = cartItems.filter(item => item.id !== gameId);
         }
-          localStorage.setItem('cart', JSON.stringify(cartItems));
-          updateCartUI();
-          attachQuantityListeners();
-        });
-      });
-    }
+
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+        updateCartUI();
+      }
+    });
+  }
   
     updateCartUI();
     attachQuantityListeners();

@@ -1,32 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@400;600&display=swap');
 @import url('variables.css');
-@import url('logo&navbar.css');
-@import url('footer.css');
-@import url('cart.css');
 
 body {
-    font-family: 'Changa', sans-serif;
+    font-family: 'Rubik', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #0A2E8C, #030D26);
+    background: linear-gradient(to bottom, #4e54c8, #1b1e6f);
     color: #fff;
     padding-top: 10px;
     min-height: var(--common-min-height);
 }
 p {
     color: #030D26;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-nav a:hover {
-    text-decoration: underline;
-    color: #ffcc00;
 }
 
 .checkout-container {
@@ -121,8 +106,9 @@ nav a:hover {
 }
 
 .checkout-btn:hover {
-    background: linear-gradient(135deg, #feb47b, #ff7e5f);
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #B961FF, #58009D);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #B961FF;
 }
 
 /* Order Summary */

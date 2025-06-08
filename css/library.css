@@ -1,7 +1,5 @@
 @import url('variables.css');
-@import url('logo&navbar.css');
-@import url('footer.css');
-@import url('cart.css');
+
 
 html, body {
   margin: 0;
@@ -9,10 +7,11 @@ html, body {
 }
 
 body {
-  background-color: #121212;
+  background: linear-gradient(to bottom, rgba(60, 60, 60, 0.9), rgba(18, 18, 18, 0.9));
   color: #e0e0e0;
   font-family: Arial, sans-serif;
   min-height: 100vh;
+  width: 100%;
 }
 
 main {
@@ -65,28 +64,32 @@ main {
 
 .library-image-grid {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
-  justify-content: center;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center;
+  align-items: start;
   width: 100%;
-  padding: 0 20px;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
+
 .game-box {
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  max-width: 350px;
-  margin: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 340px;
+  background-color: #1c1c1c;
 }
 
 .game-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-  background: linear-gradient(90deg, #B961FF, #58009D);
-  box-shadow: 0 4px 50px purple;
+  transform: translateY(-8px) scale(1.03);
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 110, 196, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .library-image-wrapper {

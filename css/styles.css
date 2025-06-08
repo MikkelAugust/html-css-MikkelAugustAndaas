@@ -1,7 +1,5 @@
 @import url('variables.css');
-@import url('logo&navbar.css');
-@import url('footer.css');
-@import url('cart.css');
+
 
 body {
   font-family: 'Changa', sans-serif;
@@ -24,48 +22,12 @@ header h1 {
   color: #333;
 }
 
-header .shopping {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-header .shopping img {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-}
-
-header .shopping .quantity {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: #ff4500;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 main {
   margin-top: 50px;
   justify-content: center;
   position: sticky;
   display: flex;
   text-decoration: none;
-  list-style: none;
-}
-
-.image-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-li {
   list-style: none;
 }
 
@@ -124,14 +86,6 @@ li {
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
-}
-
-.product-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  border: 1px solid #ff4500;
 }
 
 .product-card h3 {
